@@ -1,0 +1,46 @@
+.container {
+  padding: 16px 0;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  .logo img {
+    max-width: 191px;
+    max-height: 34px;
+  }
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    ul {
+      + ul {
+        margin-left: 20px;
+      }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: end;
+      align-items: center;
+      li + li {
+        margin-left: 20px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: $white-color;
+        font-size: $font-2;
+        font-weight: 500;
+        i {
+          padding-left: 15px;
+        }
+      }
+      .nav-login {
+        padding: 16px 40px;
+        background: $yellow-color;
+        color: $primary-color;
+        border-radius: 8px;
+        transition: 0.5s;
+        &:hover {
+          background-color: #c2a755;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}

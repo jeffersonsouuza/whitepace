@@ -1,0 +1,36 @@
+.hero {
+  background-image: url("../../../img/detalhes1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 547px;
+  background-position-y: bottom;
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 140px 0;
+    .content {
+      padding-right: 10px;
+      h1 {
+        color: $white-color;
+        font-size: $font-5;
+        font-weight: 500;
+        margin-bottom: 24px;
+      }
+      p {
+        color: $white-color;
+        font-size: $font-2;
+        margin-bottom: 60px;
+      }
+      button {
+        i {
+          margin-left: 15px;
+        }
+      }
+    }
+    figure img {
+      min-width: 824px;
+      min-height: 549px;
+    }
+  }
+}

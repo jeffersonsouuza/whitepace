@@ -1,0 +1,49 @@
+$primary-color: #043873;
+$primary-color-light: #4f9cf9;
+$yellow-color: #ffe492;
+$info-color: #a7cefc;
+$white-color: #ffffff;
+$black-color: #212529;
+
+/* background */
+.bg-primary-color {
+  background: $primary-color;
+}
+
+.bg-primary-color-light {
+  background: $primary-color-light;
+}
+
+.bg-yellow-color {
+  background: $yellow-color;
+}
+
+/* text */
+.text-white-color {
+  color: $white-color;
+}
+
+.text-black-color {
+  color: $black-color;
+}
+
+.text-yellow-color {
+  color: $yellow-color;
+}
+
+/* font size*/
+$font-1: 1em;
+$font-2: 1.125em;
+$font-5: 4.5em;
+
+.font-1 {
+  font-size: $font-1;
+}
+
+.font-2 {
+  font-size: $font-2;
+}
+
+.font-5 {
+  font-size: $font-5;
+}

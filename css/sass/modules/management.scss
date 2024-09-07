@@ -1,0 +1,68 @@
+.management {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    .content-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      &:nth-child(1) {
+        margin-bottom: 100px;
+      }
+      .content-project {
+        grid-column: 1;
+        padding: 68px 60px 68px 0;
+      }
+
+      &:nth-child(2) {
+        .content-work {
+          grid-column: 2;
+          padding: 183.5px 0 183.5px 100px;
+        }
+        figure {
+          grid-column: 1;
+          grid-row: 1;
+          img {
+            min-width: 710px;
+            min-height: 661px;
+          }
+        }
+      }
+
+      h1 {
+        font-size: $font-5;
+        font-weight: 700;
+        margin-bottom: 24px;
+        .span1::after {
+          content: "Management";
+          background-image: url("/img/text-element.png");
+          background-repeat: no-repeat;
+          background-size: 100% 30%;
+          background-position: bottom;
+          font-weight: 700;
+        }
+        .span2::after {
+          content: "together";
+          background-image: url("/img/text-element.png");
+          background-repeat: no-repeat;
+          background-size: 100% 30%;
+          background-position: bottom;
+          font-weight: 700;
+        }
+      }
+      p {
+        font-size: $font-2;
+        line-height: 1.5;
+        margin-bottom: 60px;
+      }
+      button i {
+        color: $white-color;
+      }
+      figure img {
+        min-width: 748px;
+        min-height: 547px;
+      }
+    }
+  }
+}

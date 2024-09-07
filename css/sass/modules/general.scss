@@ -1,0 +1,78 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: "Inter";
+  src: url("./font_Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("./font_Inter/Inter-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  box-sizing: border-box;
+  color: $black-color;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1490px;
+  margin: 0 auto;
+  display: grid;
+}
+
+button {
+  cursor: pointer;
+}
+
+a i {
+  color: $white-color;
+}
+
+.button-primary {
+  padding: 16px 24px;
+  background: $primary-color-light;
+  color: $white-color;
+  border-radius: 8px;
+  font-size: $font-2;
+  border: none;
+  &:hover {
+    background: #3169ad;
+    transition: 0.5s ease-in;
+  }
+  i {
+    color: $white-color;
+  }
+}
+
+@media (min-width: 1440px) {
+  .breakpoint-spacing {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .breakpoint-spacing {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 320px) {
+  .breakpoint-spacing {
+    padding: 0 16px;
+  }
+}
