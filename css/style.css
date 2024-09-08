@@ -171,7 +171,7 @@ a i {
   margin-left: 20px;
 }
 .container .navbar ul li + li {
-  margin-left: 20px;
+  margin-left: 32px;
 }
 .container .navbar ul a {
   display: flex;
@@ -181,16 +181,19 @@ a i {
   font-weight: 500;
 }
 .container .navbar ul a i {
-  padding-left: 15px;
+  padding-left: 10px;
 }
-.container .navbar ul .nav-login {
+.container .navbar .nav_button {
+  margin-left: 60px;
+}
+.container .navbar .nav_button .nav-login {
   padding: 16px 40px;
   background: #ffe492;
   color: #043873;
   border-radius: 8px;
   transition: 0.5s;
 }
-.container .navbar ul .nav-login:hover {
+.container .navbar .nav_button .nav-login:hover {
   background-color: #c2a755;
   color: #ffffff;
 }
