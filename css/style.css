@@ -33,7 +33,15 @@
   font-size: 1.125em;
 }
 
+.font-4 {
+  font-size: 3em;
+}
+
 .font-5 {
+  font-size: 4em;
+}
+
+.font-6 {
   font-size: 4.5em;
 }
 
@@ -79,7 +87,7 @@ a i {
 }
 
 .button-primary {
-  padding: 16px 24px;
+  padding: 20px 40px;
   background: #4f9cf9;
   color: #ffffff;
   border-radius: 8px;
@@ -144,7 +152,15 @@ a i {
   font-size: 1.125em;
 }
 
+.font-4 {
+  font-size: 3em;
+}
+
 .font-5 {
+  font-size: 4em;
+}
+
+.font-6 {
   font-size: 4.5em;
 }
 
@@ -183,6 +199,9 @@ a i {
 .container .navbar ul a i {
   padding-left: 10px;
 }
+.container .navbar ul .button-primary {
+  padding: 16px 24px;
+}
 .container .navbar .nav_button {
   margin-left: 60px;
 }
@@ -197,18 +216,46 @@ a i {
   background-color: #c2a755;
   color: #ffffff;
 }
+.container .navbar .nav_button li:nth-child(3) {
+  margin-left: 20px;
+}
+.container .navbar .nav_button li:nth-child(3) .menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .navbar .nav_button li:nth-child(3) .menu-list i {
+  margin-top: 5px;
+  padding: 0;
+}
 
+@media screen and (min-width: 1440px) {
+  .nav_button li:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (min-width: 1152px) and (max-width: 1399px) {
+  .navbar ul:nth-child(1) {
+    display: none;
+  }
+}
+@media screen and (max-width: 769px) {
+  .navbar ul:nth-child(1),
+  .nav_button li:nth-child(1),
+  .nav_button li:nth-child(2) {
+    display: none;
+  }
+}
 .hero {
-  background-image: url("../../../img/detalhes1.png");
+  background-image: url("/img/detalhes1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 547px;
   background-position-y: bottom;
 }
 .hero .container {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
+  grid-template-columns: minmax(656px, 1fr) minmax(824px, 1fr);
+  grid-template-rows: 549px;
   padding: 140px 0;
 }
 .hero .container .content {
@@ -216,7 +263,7 @@ a i {
 }
 .hero .container .content h1 {
   color: #ffffff;
-  font-size: 4.5em;
+  font-size: 4em;
   font-weight: 500;
   margin-bottom: 24px;
 }
@@ -228,11 +275,44 @@ a i {
 .hero .container .content button i {
   margin-left: 15px;
 }
-.hero .container figure img {
-  min-width: 824px;
-  min-height: 549px;
-}
 
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  .hero .container {
+    grid-template-columns: minmax(361px, 1fr) minmax(685px, 1fr);
+    grid-template-rows: 456px;
+  }
+}
+@media screen and (min-width: 1152px) and (max-width: 1440px) {
+  .hero .container {
+    grid-template-columns: minmax(562px, 1fr) minmax(526px, 1fr);
+    grid-template-rows: 361px;
+  }
+  .hero .container .content {
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1152px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+  .hero .container .content {
+    text-align: center;
+  }
+  .hero .container .content h1 {
+    margin-bottom: 24px;
+  }
+  .hero .container .content p {
+    margin-bottom: 60px;
+  }
+  .hero .container .content button {
+    margin-bottom: 100px;
+  }
+  .hero .container figure img {
+    padding: 0 88px;
+  }
+}
 .management {
   padding-top: 140px;
   padding-bottom: 140px;
@@ -260,12 +340,8 @@ a i {
   grid-column: 1;
   grid-row: 1;
 }
-.management .container .content-item:nth-child(2) figure img {
-  min-width: 710px;
-  min-height: 661px;
-}
 .management .container .content-item h1 {
-  font-size: 4.5em;
+  font-size: 4em;
   font-weight: 700;
   margin-bottom: 24px;
 }
@@ -293,9 +369,195 @@ a i {
 .management .container .content-item button i {
   color: #ffffff;
 }
-.management .container .content-item figure img {
-  min-width: 748px;
-  min-height: 547px;
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  .management .container .content-item .image-project {
+    width: 719px;
+    height: 448px;
+  }
+}
+@media screen and (min-width: 1152px) and (max-width: 1440px) {
+  .management .container .content-item .content-project {
+    padding: 0 92px 24px 0;
+  }
+  .management .container .content-item figure {
+    justify-self: end;
+    align-self: center;
+    padding: 27px 7px 27px 32px;
+  }
+  .management .container .content-item:nth-child(2) .content-work {
+    padding: 88px 0 0 33px;
+  }
+  .management .container .content-item:nth-child(2) figure {
+    padding: 0;
+    justify-self: start;
+    align-self: center;
+  }
+  .management .container .content-item:nth-child(2) figure img {
+    width: 528px;
+    height: 491px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1152px) {
+  .management {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .management .container {
+    justify-items: center;
+  }
+  .management .container .content-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .management .container .content-item .content-project {
+    padding: 0;
+    margin-bottom: 60px;
+  }
+  .management .container .content-item .content-project br {
+    display: none;
+  }
+  .management .container .content-item figure img {
+    padding: 0 83px;
+  }
+  .management .container .content-item:nth-child(2) .content-work {
+    grid-column: auto;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+  .management .container .content-item:nth-child(2) figure {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .management .container .content-item:nth-child(2) figure img {
+    padding: 0 137px;
+  }
+}
+.extension {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.extension .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.extension .container .content-extension {
+  margin-right: 98px;
+}
+.extension .container .content-extension h1 {
+  font-size: 4em;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+.extension .container .content-extension h1 .span1::after {
+  content: "Extension";
+  background-image: url("/img/text-element.png");
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+  background-position: bottom;
+  font-weight: 700;
+  color: #ffffff;
+}
+.extension .container .content-extension p {
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+.extension .container .content-extension button i {
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1152px) {
+  .extension {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .extension .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .extension .container .content-extension {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  .extension .container figure img {
+    padding: 0 105px;
+  }
+}
+.customise {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.customise .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.customise .container .content-customise h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #212529;
+}
+.customise .container .content-customise h1 .span1::after {
+  content: "your needs";
+  background-image: url("/img/text-element.png");
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+  background-position: bottom;
+  font-weight: 700;
+  color: #212529;
+}
+.customise .container .content-customise p {
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  color: #212529;
+}
+.customise .container .content-customise button i {
+  color: #ffffff;
+}
+.customise .container figure {
+  margin-right: 98px;
+}
+.customise .container figure img {
+  object-fit: cover;
+  width: 714px;
+  height: 532px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .customise .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .customise .container figure {
+    margin-right: 0;
+    padding: 0 117px;
+  }
+  .customise .container figure img {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1152px) {
+  .extension {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .extension .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .extension .container .content-extension {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  .extension .container figure img {
+    padding: 0 105px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

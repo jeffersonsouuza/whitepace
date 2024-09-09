@@ -23,10 +23,6 @@
         figure {
           grid-column: 1;
           grid-row: 1;
-          img {
-            min-width: 710px;
-            min-height: 661px;
-          }
         }
       }
 
@@ -59,9 +55,79 @@
       button i {
         color: $white-color;
       }
-      figure img {
-        min-width: 748px;
-        min-height: 547px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  .management .container .content-item {
+    .image-project {
+      width: 719px;
+      height: 448px;
+    }
+  }
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1440px) {
+  .management .container .content-item {
+    .content-project {
+      padding: 0 92px 24px 0;
+    }
+    figure {
+      justify-self: end;
+      align-self: center;
+      padding: 27px 7px 27px 32px;
+    }
+    &:nth-child(2) {
+      .content-work {
+        padding: 88px 0 0 33px;
+      }
+      figure {
+        padding: 0;
+        justify-self: start;
+        align-self: center;
+        img {
+          width: 528px;
+          height: 491px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1152px) {
+  .management {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .container {
+      justify-items: center;
+      .content-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        .content-project {
+          padding: 0;
+          margin-bottom: 60px;
+          br {
+            display: none;
+          }
+        }
+        figure img {
+          padding: 0 83px;
+        }
+        &:nth-child(2) {
+          .content-work {
+            grid-column: auto;
+            padding: 0;
+            margin-bottom: 100px;
+          }
+          figure {
+            grid-column: auto;
+            grid-row: auto;
+            img {
+              padding: 0 137px;
+            }
+          }
+        }
       }
     }
   }

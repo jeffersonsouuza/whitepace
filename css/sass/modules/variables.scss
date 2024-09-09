@@ -34,7 +34,9 @@ $black-color: #212529;
 /* font size*/
 $font-1: 1em;
 $font-2: 1.125em;
-$font-5: 4.5em;
+$font-4: 3em;
+$font-5: 4em;
+$font-6: 4.5em;
 
 .font-1 {
   font-size: $font-1;
@@ -44,6 +46,14 @@ $font-5: 4.5em;
   font-size: $font-2;
 }
 
+.font-4 {
+  font-size: $font-4;
+}
+
 .font-5 {
   font-size: $font-5;
+}
+
+.font-6 {
+  font-size: $font-6;
 }
