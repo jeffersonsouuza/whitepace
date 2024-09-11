@@ -1,0 +1,132 @@
+.plans {
+  padding-top: 140px;
+  .container {
+    grid-template-columns: 1fr;
+    position: relative;
+    header {
+      margin-bottom: 60px;
+      h1 {
+        font-size: $font-6;
+        font-weight: 700;
+        margin-bottom: 24px;
+        color: $black-color;
+        text-align: center;
+        .span::after {
+          content: "Your Plan";
+          background-image: url("/img/text-element.png");
+          background-repeat: no-repeat;
+          background-size: 100% 30%;
+          background-position: bottom;
+          font-weight: 700;
+          color: $black-color;
+        }
+      }
+      p {
+        font-size: $font-2;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $black-color;
+        text-align: center;
+        padding: 0 251px;
+      }
+    }
+    .content-plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      position: absolute;
+      top: 300px;
+      max-width: 1481px;
+      overflow-y: hidden;
+      padding-bottom: 140px;
+      .plan-free {
+        padding: 40px 44px;
+        margin: 63px 32px 63px 0;
+      }
+      .plan-organization {
+        padding: 40px 44px;
+        margin: 63px 0 63px 32px;
+      }
+      .plan-free,
+      .plan-organization,
+      .plan-personal {
+        border-radius: 10px;
+        border: 1px solid $yellow-color;
+        p {
+          font-size: $font-2;
+          font-weight: 600;
+          text-align: start;
+          margin-bottom: 25px;
+          &:nth-child(3) {
+            font-size: 0.9em;
+          }
+        }
+        .value {
+          font-size: 2.25em;
+          font-weight: 700;
+          margin-bottom: 25px;
+        }
+        ul {
+          margin-bottom: 25px;
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 28px;
+            font-weight: 500;
+            line-height: 1.5;
+            &::before {
+              content: url("/img/icons/Ckeck.png");
+              position: relative;
+              bottom: -2.5px;
+              margin-right: 22px;
+            }
+          }
+        }
+        a {
+          border-radius: 8px;
+          border: 1px solid $yellow-color;
+          padding: 16px 40px;
+          &.link-plan-personal {
+            border: none;
+            color: $white-color;
+          }
+        }
+      }
+      .plan-personal {
+        padding: 80px 44px;
+        p,
+        li {
+          color: $white-color;
+        }
+        p:nth-child(2) {
+          color: $yellow-color;
+        }
+        ul {
+          margin-bottom: 35px;
+          li::before {
+            content: url("/img/icons/check-yellow.png");
+            margin-right: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .plans .container {
+    header p {
+      padding: 0;
+    }
+    .content-plans {
+      left: 0;
+      right: 0;
+
+      .plan-free,
+      .plan-organization,
+      .plan-personal {
+        min-width: 472px;
+      }
+    }
+  }
+}

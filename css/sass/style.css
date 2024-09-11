@@ -247,7 +247,7 @@ a i {
     display: none;
   }
 }
-@media screen and (max-width: 1151px) {
+@media screen and (max-width: 769px) {
   .navbar ul:nth-child(1),
   .nav_button li:nth-child(1),
   .nav_button li:nth-child(2) {
@@ -564,22 +564,19 @@ a i {
 }
 .plans {
   padding-top: 140px;
+  padding-bottom: 140px;
 }
 .plans .container {
   grid-template-columns: 1fr;
-  position: relative;
 }
-.plans .container header {
-  margin-bottom: 60px;
-}
-.plans .container header h1 {
+.plans .container h1 {
   font-size: 4.5em;
   font-weight: 700;
   margin-bottom: 24px;
   color: #212529;
   text-align: center;
 }
-.plans .container header h1 .span::after {
+.plans .container h1 .span::after {
   content: "Your Plan";
   background-image: url("/img/text-element.png");
   background-repeat: no-repeat;
@@ -588,50 +585,32 @@ a i {
   font-weight: 700;
   color: #212529;
 }
-.plans .container header p {
+.plans .container p {
   font-size: 1.125em;
   font-weight: 400;
   line-height: 1.5;
+  margin-bottom: 60px;
   color: #212529;
   text-align: center;
-  padding: 0 251px;
 }
 .plans .container .content-plans {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  position: absolute;
-  top: 300px;
-  max-width: 1481px;
-  overflow-y: hidden;
-  padding-bottom: 140px;
-}
-.plans .container .content-plans .plan-free {
-  padding: 40px 44px;
-  margin: 63px 32px 63px 0;
-}
-.plans .container .content-plans .plan-organization {
-  padding: 40px 44px;
-  margin: 63px 0 63px 32px;
+  padding: 63px 0;
 }
 .plans .container .content-plans .plan-free,
 .plans .container .content-plans .plan-organization,
 .plans .container .content-plans .plan-personal {
-  border-radius: 10px;
-  border: 1px solid #ffe492;
+  padding: 40px 44px;
 }
 .plans .container .content-plans .plan-free p,
 .plans .container .content-plans .plan-organization p,
 .plans .container .content-plans .plan-personal p {
+  margin: 0;
   font-size: 1.125em;
   font-weight: 600;
   text-align: start;
   margin-bottom: 25px;
-}
-.plans .container .content-plans .plan-free p:nth-child(3),
-.plans .container .content-plans .plan-organization p:nth-child(3),
-.plans .container .content-plans .plan-personal p:nth-child(3) {
-  font-size: 0.9em;
 }
 .plans .container .content-plans .plan-free .value,
 .plans .container .content-plans .plan-organization .value,
@@ -640,72 +619,24 @@ a i {
   font-weight: 700;
   margin-bottom: 25px;
 }
-.plans .container .content-plans .plan-free ul,
-.plans .container .content-plans .plan-organization ul,
-.plans .container .content-plans .plan-personal ul {
-  margin-bottom: 25px;
-}
-.plans .container .content-plans .plan-free ul li,
-.plans .container .content-plans .plan-organization ul li,
-.plans .container .content-plans .plan-personal ul li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 28px;
-  font-weight: 500;
-  line-height: 1.5;
-}
-.plans .container .content-plans .plan-free ul li::before,
-.plans .container .content-plans .plan-organization ul li::before,
-.plans .container .content-plans .plan-personal ul li::before {
-  content: url("/img/icons/Ckeck.png");
-  position: relative;
-  bottom: -2.5px;
-  margin-right: 22px;
-}
-.plans .container .content-plans .plan-free a,
-.plans .container .content-plans .plan-organization a,
-.plans .container .content-plans .plan-personal a {
-  border-radius: 8px;
-  border: 1px solid #ffe492;
-  padding: 16px 40px;
-}
-.plans .container .content-plans .plan-free a.link-plan-personal,
-.plans .container .content-plans .plan-organization a.link-plan-personal,
-.plans .container .content-plans .plan-personal a.link-plan-personal {
-  border: none;
-  color: #ffffff;
-}
 .plans .container .content-plans .plan-personal {
-  padding: 80px 44px;
-}
-.plans .container .content-plans .plan-personal p,
-.plans .container .content-plans .plan-personal li {
-  color: #ffffff;
-}
-.plans .container .content-plans .plan-personal p:nth-child(2) {
-  color: #ffe492;
-}
-.plans .container .content-plans .plan-personal ul {
-  margin-bottom: 35px;
-}
-.plans .container .content-plans .plan-personal ul li::before {
-  content: url("/img/icons/check-yellow.png");
-  margin-right: 22px;
+  padding: 17px 44px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
-  .plans .container header p {
-    padding: 0;
+@media screen and (min-width: 768px) and (max-width: 1152px) {
+  .extension {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
-  .plans .container .content-plans {
-    left: 0;
-    right: 0;
+  .extension .container {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  .plans .container .content-plans .plan-free,
-  .plans .container .content-plans .plan-organization,
-  .plans .container .content-plans .plan-personal {
-    min-width: 472px;
+  .extension .container .content-extension {
+    margin: 0;
+    margin-bottom: 60px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+  .extension .container figure img {
+    padding: 0 105px;
+  }
+}/*# sourceMappingURL=style.css.map */
