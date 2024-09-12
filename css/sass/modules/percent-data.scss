@@ -1,0 +1,74 @@
+.percent-data {
+  .container {
+    padding: 140px 0;
+    grid-template-columns: 1fr 1fr;
+    .content {
+      .text {
+        display: grid;
+        gap: 24px;
+        margin-bottom: 60px;
+        h1 {
+          font-size: $font-6;
+          color: $black-color;
+          font-weight: 700;
+          .span::after {
+            content: "your data";
+            background-image: url("/img/text-element.png");
+            background-repeat: no-repeat;
+            background-size: 100% 30%;
+            background-position: bottom;
+            font-weight: 700;
+            color: $black-color;
+          }
+        }
+        p {
+          font-size: $font-2;
+          color: $black-color;
+          font-weight: 400;
+        }
+      }
+      .action {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
+  .percent-data {
+    .container {
+      .content {
+        .text {
+          h1 {
+            font-size: $font-5;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .percent-data {
+    .container {
+      grid-template-columns: 1fr;
+      gap: 100px;
+      .content {
+        grid-row: 2;
+        .text {
+          text-align: center;
+          h1 {
+            font-size: $font-4;
+          }
+        }
+        .action {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      figure {
+        grid-row: 1;
+      }
+    }
+  }
+}

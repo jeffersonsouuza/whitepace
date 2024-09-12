@@ -1,5 +1,7 @@
 .plans {
   padding-top: 140px;
+  padding-bottom: 140px;
+  min-height: 1272px;
   .container {
     grid-template-columns: 1fr;
     position: relative;
@@ -35,10 +37,9 @@
       grid-template-columns: repeat(3, 1fr);
       justify-content: center;
       position: absolute;
-      top: 300px;
+      top: 229px;
       max-width: 1481px;
       overflow-y: hidden;
-      padding-bottom: 140px;
       .plan-free {
         padding: 40px 44px;
         margin: 63px 32px 63px 0;

@@ -1,0 +1,99 @@
+.work-everywhere {
+  padding: 140px 0;
+  background-image: url("/img/detalhes2.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 60px;
+    .content {
+      padding: 0 190px;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      h1 {
+        font-size: $font-6;
+        font-weight: 700;
+        color: $white-color;
+        .span::after {
+          content: "you are";
+          background-image: url("/img/text-element-blue.png");
+          background-repeat: no-repeat;
+          background-size: 100% 30%;
+          background-position: bottom;
+          font-weight: 700;
+          color: $white-color;
+        }
+      }
+      p {
+        font-size: $font-2;
+        font-weight: 400;
+        color: $white-color;
+      }
+      br {
+        display: none;
+      }
+    }
+    a {
+      justify-self: center;
+      max-width: 200px;
+      max-height: 63px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .work-everywhere {
+    background-position-x: -270px;
+    .container .content {
+      padding: 0 156px;
+    }
+  }
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
+  .work-everywhere {
+    background-image: none;
+    .container {
+      padding-left: 32px;
+      .content {
+        max-width: 650px;
+        max-height: 421px;
+        padding: 0;
+        h1 {
+          font-size: $font-5;
+          text-align: start;
+        }
+      }
+      a {
+        justify-self: start;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .work-everywhere {
+    background-image: none;
+    .container {
+      padding-left: 32px;
+      .content {
+        max-width: 604px;
+        max-height: 393px;
+        padding: 0;
+        h1 {
+          font-size: $font-4;
+          text-align: start;
+        }
+        p {
+          text-align: start;
+        }
+      }
+      a {
+        justify-self: start;
+      }
+    }
+  }
+}

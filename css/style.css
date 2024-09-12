@@ -63,6 +63,14 @@
   color: #212529;
 }
 
+p {
+  line-height: 30px;
+}
+
+h1 {
+  line-height: 87px;
+}
+
 ul {
   list-style: none;
 }
@@ -564,6 +572,8 @@ a i {
 }
 .plans {
   padding-top: 140px;
+  padding-bottom: 140px;
+  min-height: 1272px;
 }
 .plans .container {
   grid-template-columns: 1fr;
@@ -601,10 +611,9 @@ a i {
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   position: absolute;
-  top: 300px;
+  top: 229px;
   max-width: 1481px;
   overflow-y: hidden;
-  padding-bottom: 140px;
 }
 .plans .container .content-plans .plan-free {
   padding: 40px 44px;
@@ -705,6 +714,162 @@ a i {
   .plans .container .content-plans .plan-organization,
   .plans .container .content-plans .plan-personal {
     min-width: 472px;
+  }
+}
+.work-everywhere {
+  padding: 140px 0;
+  background-image: url("/img/detalhes2.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+.work-everywhere .container {
+  grid-template-columns: 1fr;
+  padding: 0;
+  gap: 60px;
+}
+.work-everywhere .container .content {
+  padding: 0 190px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.work-everywhere .container .content h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  color: #ffffff;
+}
+.work-everywhere .container .content h1 .span::after {
+  content: "you are";
+  background-image: url("/img/text-element-blue.png");
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+  background-position: bottom;
+  font-weight: 700;
+  color: #ffffff;
+}
+.work-everywhere .container .content p {
+  font-size: 1.125em;
+  font-weight: 400;
+  color: #ffffff;
+}
+.work-everywhere .container .content br {
+  display: none;
+}
+.work-everywhere .container a {
+  justify-self: center;
+  max-width: 200px;
+  max-height: 63px;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .work-everywhere {
+    background-position-x: -270px;
+  }
+  .work-everywhere .container .content {
+    padding: 0 156px;
+  }
+}
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
+  .work-everywhere {
+    background-image: none;
+  }
+  .work-everywhere .container {
+    padding-left: 32px;
+  }
+  .work-everywhere .container .content {
+    max-width: 650px;
+    max-height: 421px;
+    padding: 0;
+  }
+  .work-everywhere .container .content h1 {
+    font-size: 4em;
+    text-align: start;
+  }
+  .work-everywhere .container a {
+    justify-self: start;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .work-everywhere {
+    background-image: none;
+  }
+  .work-everywhere .container {
+    padding-left: 32px;
+  }
+  .work-everywhere .container .content {
+    max-width: 604px;
+    max-height: 393px;
+    padding: 0;
+  }
+  .work-everywhere .container .content h1 {
+    font-size: 3em;
+    text-align: start;
+  }
+  .work-everywhere .container .content p {
+    text-align: start;
+  }
+  .work-everywhere .container a {
+    justify-self: start;
+  }
+}
+.percent-data .container {
+  padding: 140px 0;
+  grid-template-columns: 1fr 1fr;
+}
+.percent-data .container .content .text {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+.percent-data .container .content .text h1 {
+  font-size: 4.5em;
+  color: #212529;
+  font-weight: 700;
+}
+.percent-data .container .content .text h1 .span::after {
+  content: "your data";
+  background-image: url("/img/text-element.png");
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+  background-position: bottom;
+  font-weight: 700;
+  color: #212529;
+}
+.percent-data .container .content .text p {
+  font-size: 1.125em;
+  color: #212529;
+  font-weight: 400;
+}
+.percent-data .container .content .action {
+  width: 100%;
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
+  .percent-data .container .content .text h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .percent-data .container {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+  .percent-data .container .content {
+    grid-row: 2;
+  }
+  .percent-data .container .content .text {
+    text-align: center;
+  }
+  .percent-data .container .content .text h1 {
+    font-size: 3em;
+  }
+  .percent-data .container .content .action {
+    display: flex;
+    justify-content: center;
+  }
+  .percent-data .container figure {
+    grid-row: 1;
   }
 }
 
