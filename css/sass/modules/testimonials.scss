@@ -1,0 +1,123 @@
+.testimonials {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  min-height: 994px;
+  .container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    h1 {
+      font-size: $font-6;
+      font-weight: 700;
+      text-align: center;
+      .span::after {
+        content: "Says";
+        background-image: url("/img/text-element.png");
+        background-repeat: no-repeat;
+        background-size: 100% 80%;
+        background-position: bottom;
+        font-weight: 700;
+        color: $black-color;
+      }
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      .card-item {
+        display: grid;
+        padding: 60px 40px;
+        gap: 60px;
+        border-radius: 10px;
+        box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
+        &:nth-child(1) {
+          .testimonial {
+            border-bottom: 1px solid $black-color;
+          }
+        }
+        .testimonial {
+          display: grid;
+          gap: 32px;
+          border-bottom: 1px solid $white-color;
+          padding-bottom: 40px;
+        }
+        .customer-data {
+          display: grid;
+          grid-template-columns: 1fr 246px;
+          gap: 42px;
+          .content-customer {
+            h2 {
+              font-size: $font-3;
+              font-weight: 600;
+              margin-bottom: 15px;
+            }
+            p {
+              font-size: $font-1;
+              font-weight: 400;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+    .slider-control {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 12px;
+      .control-1,
+      .control-2,
+      .control-3 {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
+  .testimonials .container {
+    h1 {
+      font-size: $font-6;
+    }
+    .cards {
+      .card-item .customer-data {
+        grid-template-columns: 1fr 174px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1151px) {
+  .testimonials {
+    // position: relative;
+    .container {
+      position: relative;
+      max-height: 932px;
+      h1 {
+        font-size: $font-4;
+      }
+      .cards {
+        position: absolute;
+        top: 330px;
+        overflow-y: hidden;
+        padding: 20px 0;
+        margin: 20px 0;
+        left: 0;
+        right: 0;
+        .card-item {
+          min-width: 430px;
+          .customer-data {
+            grid-template-columns: 1fr 193px;
+          }
+        }
+      }
+      .slider-control {
+        position: absolute;
+        top: 820px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

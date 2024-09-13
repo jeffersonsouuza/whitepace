@@ -1,0 +1,58 @@
+.favorite-apps {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  .container {
+    grid-template-columns: minmax(582px, 1fr) minmax(798px, 1fr);
+    gap: 100px;
+    .content {
+      display: grid;
+      gap: 60px;
+      .text {
+        h1 {
+          font-size: $font-6;
+          font-weight: 700;
+          margin-bottom: 24px;
+        }
+        p {
+          font-size: $font-2;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1919px) {
+  .favorite-apps .container {
+    grid-template-columns: 1fr 1fr;
+    .content {
+      .text {
+        h1 {
+          font-size: $font-5;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1151px) {
+  .favorite-apps .container {
+    grid-template-columns: 1fr;
+    figure {
+      display: flex;
+      justify-content: center;
+    }
+    .content {
+      .text {
+        text-align: center;
+        h1 {
+          font-size: $font-4;
+        }
+      }
+      .btn-action {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

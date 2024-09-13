@@ -1,0 +1,41 @@
+.sponsors {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 100px;
+    h1 {
+      font-size: $font-6;
+      font-weight: 700;
+      color: $black-color;
+      text-align: center;
+      .span::after {
+        content: "sponsors";
+        background-image: url("/img/text-element.png");
+        background-repeat: no-repeat;
+        background-size: 100% 30%;
+        background-position: bottom;
+        font-weight: 700;
+        color: $black-color;
+      }
+    }
+    figure {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .sponsors .container {
+    figure {
+      flex-direction: column;
+      gap: 100px;
+      img {
+        align-self: center;
+      }
+    }
+  }
+}
