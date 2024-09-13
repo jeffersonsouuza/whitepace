@@ -91,7 +91,6 @@
 
 @media screen and (max-width: 1151px) {
   .testimonials {
-    // position: relative;
     .container {
       position: relative;
       max-height: 932px;
@@ -100,7 +99,7 @@
       }
       .cards {
         position: absolute;
-        top: 330px;
+        top: 140px;
         overflow-y: hidden;
         padding: 20px 0;
         margin: 20px 0;
@@ -115,8 +114,8 @@
       }
       .slider-control {
         position: absolute;
-        top: 820px;
-        margin: 0 auto;
+        top: 780px;
+        width: 100%;
       }
     }
   }
