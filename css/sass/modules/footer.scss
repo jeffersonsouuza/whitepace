@@ -1,12 +1,13 @@
 .footer {
   padding-top: 140px;
   padding-bottom: 32px;
+  position: relative;
   .container {
     grid-template-columns: 1fr;
     gap: 100px;
     .footer-main-links {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: 240px 1fr 1fr 1fr 260px;
       gap: 100px;
       max-width: 1480px;
       .about {
@@ -21,6 +22,9 @@
           font-weight: 100;
           font-size: $font-1;
           color: #f7f7ee;
+          br {
+            display: none;
+          }
         }
       }
       .product,
@@ -28,6 +32,9 @@
       .company {
         p {
           margin-bottom: 15px;
+          &:nth-child(1) {
+            font-weight: bold;
+          }
         }
         ul {
           display: flex;
@@ -48,18 +55,69 @@
         }
       }
     }
-  }
-}
-
-@media screen and (min-width: 1152px) and (max-width: 1439px) {
-  .footer {
-    .container {
-      .footer-main-links {
-        max-width: 1088px;
+    .footer-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 50px;
+      border-top: 1px solid #2e4e73;
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        .change-language {
+          display: flex;
+          gap: 6px;
+        }
+      }
+      figure {
+        display: flex;
+        gap: 32px;
       }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .footer {
+    padding-top: 80px;
+    .container {
+      .footer-main-links {
+        grid-template-columns: 1fr;
+        .about p br {
+          display: block;
+        }
+        .try-it-today {
+          max-width: 201px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .footer {
+    .container {
+      .footer-info {
+        flex-direction: column;
+        padding-top: 0;
+        border-top: none;
+        gap: 20px;
+        ul {
+          justify-content: space-between;
+          gap: 0;
+          border-bottom: 1px solid #2e4e73;
+          padding-bottom: 20px;
+          .change-language {
+            display: flex;
+            gap: 6px;
+          }
+        }
+        figure {
+          display: flex;
+          gap: 32px;
+        }
+      }
+    }
+  }
 }

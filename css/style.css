@@ -1142,6 +1142,7 @@ a i {
 .footer {
   padding-top: 140px;
   padding-bottom: 32px;
+  position: relative;
 }
 .footer .container {
   grid-template-columns: 1fr;
@@ -1149,7 +1150,7 @@ a i {
 }
 .footer .container .footer-main-links {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 240px 1fr 1fr 1fr 260px;
   gap: 100px;
   max-width: 1480px;
 }
@@ -1165,10 +1166,18 @@ a i {
   font-size: 1em;
   color: #f7f7ee;
 }
+.footer .container .footer-main-links .about p br {
+  display: none;
+}
 .footer .container .footer-main-links .product p,
 .footer .container .footer-main-links .resources p,
 .footer .container .footer-main-links .company p {
   margin-bottom: 15px;
+}
+.footer .container .footer-main-links .product p:nth-child(1),
+.footer .container .footer-main-links .resources p:nth-child(1),
+.footer .container .footer-main-links .company p:nth-child(1) {
+  font-weight: bold;
 }
 .footer .container .footer-main-links .product ul,
 .footer .container .footer-main-links .resources ul,
@@ -1189,10 +1198,61 @@ a i {
 .footer .container .footer-main-links .try-it-today a {
   max-width: 200px;
 }
+.footer .container .footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+  border-top: 1px solid #2e4e73;
+}
+.footer .container .footer-info ul {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+.footer .container .footer-info ul .change-language {
+  display: flex;
+  gap: 6px;
+}
+.footer .container .footer-info figure {
+  display: flex;
+  gap: 32px;
+}
 
-@media screen and (min-width: 1152px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .footer {
+    padding-top: 80px;
+  }
   .footer .container .footer-main-links {
-    max-width: 1088px;
+    grid-template-columns: 1fr;
+  }
+  .footer .container .footer-main-links .about p br {
+    display: block;
+  }
+  .footer .container .footer-main-links .try-it-today {
+    max-width: 201px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .footer .container .footer-info {
+    flex-direction: column;
+    padding-top: 0;
+    border-top: none;
+    gap: 20px;
+  }
+  .footer .container .footer-info ul {
+    justify-content: space-between;
+    gap: 0;
+    border-bottom: 1px solid #2e4e73;
+    padding-bottom: 20px;
+  }
+  .footer .container .footer-info ul .change-language {
+    display: flex;
+    gap: 6px;
+  }
+  .footer .container .footer-info figure {
+    display: flex;
+    gap: 32px;
   }
 }
 
