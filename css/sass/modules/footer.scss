@@ -1,0 +1,65 @@
+.footer {
+  padding-top: 140px;
+  padding-bottom: 32px;
+  .container {
+    grid-template-columns: 1fr;
+    gap: 100px;
+    .footer-main-links {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 100px;
+      max-width: 1480px;
+      .about {
+        figure {
+          margin-bottom: 15px;
+          img {
+            max-width: 191px;
+            max-height: 34px;
+          }
+        }
+        p {
+          font-weight: 100;
+          font-size: $font-1;
+          color: #f7f7ee;
+        }
+      }
+      .product,
+      .resources,
+      .company {
+        p {
+          margin-bottom: 15px;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+      .try-it-today {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        h2 {
+          font-size: 1.725em;
+          font-weight: bold;
+        }
+        a {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
+  .footer {
+    .container {
+      .footer-main-links {
+        max-width: 1088px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+}

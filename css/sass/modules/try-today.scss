@@ -6,7 +6,8 @@
   .container {
     grid-template-columns: 1fr;
     justify-content: center;
-    gap: 45px;
+    gap: 40px;
+    max-width: 608px;
     .header {
       display: flex;
       justify-content: center;

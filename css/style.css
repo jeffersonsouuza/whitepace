@@ -1082,7 +1082,8 @@ a i {
 .try-today .container {
   grid-template-columns: 1fr;
   justify-content: center;
-  gap: 45px;
+  gap: 40px;
+  max-width: 608px;
 }
 .try-today .container .header {
   display: flex;
@@ -1136,6 +1137,62 @@ a i {
   .try-today .container .header .h1 {
     font-size: 2.5em;
     line-height: 52px;
+  }
+}
+.footer {
+  padding-top: 140px;
+  padding-bottom: 32px;
+}
+.footer .container {
+  grid-template-columns: 1fr;
+  gap: 100px;
+}
+.footer .container .footer-main-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 100px;
+  max-width: 1480px;
+}
+.footer .container .footer-main-links .about figure {
+  margin-bottom: 15px;
+}
+.footer .container .footer-main-links .about figure img {
+  max-width: 191px;
+  max-height: 34px;
+}
+.footer .container .footer-main-links .about p {
+  font-weight: 100;
+  font-size: 1em;
+  color: #f7f7ee;
+}
+.footer .container .footer-main-links .product p,
+.footer .container .footer-main-links .resources p,
+.footer .container .footer-main-links .company p {
+  margin-bottom: 15px;
+}
+.footer .container .footer-main-links .product ul,
+.footer .container .footer-main-links .resources ul,
+.footer .container .footer-main-links .company ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer .container .footer-main-links .try-it-today {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+.footer .container .footer-main-links .try-it-today h2 {
+  font-size: 1.725em;
+  font-weight: bold;
+}
+.footer .container .footer-main-links .try-it-today a {
+  max-width: 200px;
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
+  .footer .container .footer-main-links {
+    max-width: 1088px;
   }
 }
 
