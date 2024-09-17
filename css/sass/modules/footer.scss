@@ -52,6 +52,7 @@
         }
         a {
           max-width: 200px;
+          padding: 20px 30px;
         }
       }
     }
@@ -78,7 +79,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .footer {
     padding-top: 80px;
     .container {
@@ -89,15 +90,11 @@
         }
         .try-it-today {
           max-width: 201px;
+          a {
+            padding: 20px 30px;
+          }
         }
       }
-    }
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1151px) {
-  .footer {
-    .container {
       .footer-info {
         flex-direction: column;
         padding-top: 0;
@@ -116,6 +113,37 @@
         figure {
           display: flex;
           gap: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    .container {
+      .footer-main-links {
+        text-align: center;
+        figure {
+          display: flex;
+          justify-content: center;
+        }
+        .try-it-today {
+          max-width: none;
+          align-items: center;
+        }
+      }
+      .footer-info {
+        ul {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+          .change-language {
+            justify-content: center;
+          }
+        }
+        figure {
+          justify-content: center;
         }
       }
     }

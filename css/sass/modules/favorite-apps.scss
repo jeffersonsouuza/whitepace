@@ -56,3 +56,10 @@
     }
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .favorite-apps {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

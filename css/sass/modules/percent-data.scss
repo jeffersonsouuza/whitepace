@@ -31,6 +31,10 @@
         width: 100%;
       }
     }
+    figure {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
@@ -48,7 +52,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .percent-data {
     .container {
       grid-template-columns: 1fr;
@@ -69,6 +73,15 @@
       figure {
         grid-row: 1;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .percent-data {
+    .container {
+      padding-top: 80px;
+      padding-bottom: 80px;
     }
   }
 }

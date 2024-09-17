@@ -6,7 +6,7 @@
   .container {
     grid-template-columns: 1fr;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     max-width: 608px;
     .header {
       display: flex;
@@ -14,7 +14,7 @@
       flex-direction: column;
       gap: 24px;
       h1 {
-        font-size: $font-6;
+        font-size: $font-6 !important;
         font-weight: 700;
         text-align: center;
       }
@@ -52,19 +52,41 @@
     justify-content: start;
     .container {
       .header .h1 {
-        font-size: $font-4;
+        font-size: $font-4 !important;
       }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .try-today {
-    justify-content: center;
+    padding-top: 100px;
     .container {
-      .header .h1 {
-        font-size: 2.5em;
-        line-height: 52px;
+      justify-content: start;
+      gap: 50px;
+      margin-right: 50px;
+      .header {
+        .h1 {
+          text-align: start;
+          font-size: 2.5em !important;
+          line-height: 52px !important;
+        }
+        p {
+          text-align: start;
+          font-size: $font-2;
+        }
+      }
+      .btn-action {
+        justify-self: start;
+        a {
+          padding: 20px 30px;
+        }
+      }
+      & > p {
+        text-align: start;
+      }
+      figure {
+        justify-self: start;
       }
     }
   }

@@ -28,7 +28,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .sponsors .container {
     figure {
       flex-direction: column;
@@ -37,5 +37,12 @@
         align-self: center;
       }
     }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .sponsors {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }

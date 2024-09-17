@@ -84,3 +84,9 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .container .navbar .nav_button {
+    margin-left: 0;
+  }
+}

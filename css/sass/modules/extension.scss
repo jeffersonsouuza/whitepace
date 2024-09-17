@@ -32,10 +32,14 @@
         color: $white-color;
       }
     }
+    figure {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1152px) {
+@media screen and (min-width: 320px) and (max-width: 1152px) {
   .extension {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -48,6 +52,18 @@
       }
       figure img {
         padding: 0 105px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .extension {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .container {
+      figure img {
+        padding: 0;
       }
     }
   }

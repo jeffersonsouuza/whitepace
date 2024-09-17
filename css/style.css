@@ -69,8 +69,8 @@ p {
 }
 
 h1 {
-  line-height: 87px;
   font-weight: 700;
+  font-size: 4.5em !important;
 }
 
 ul {
@@ -114,6 +114,7 @@ a i {
 }
 .button-primary i {
   color: #ffffff;
+  margin-left: 5px;
 }
 
 @media (min-width: 1440px) {
@@ -126,9 +127,18 @@ a i {
     padding: 0 20px;
   }
 }
+@media (min-width: 768px) and (max-width: 1151px) {
+  h1 {
+    font-size: 3em !important;
+  }
+}
 @media (min-width: 320px) {
   .breakpoint-spacing {
     padding: 0 16px;
+  }
+  h1 {
+    font-size: 2.5em !important;
+    line-height: normal;
   }
 }
 /* background */
@@ -264,6 +274,11 @@ a i {
     display: none;
   }
 }
+@media screen and (max-width: 767px) {
+  .container .navbar .nav_button {
+    margin-left: 0;
+  }
+}
 .hero {
   background-image: url("/img/detalhes1.png");
   background-repeat: no-repeat;
@@ -291,7 +306,7 @@ a i {
   margin-bottom: 60px;
 }
 .hero .container .content button i {
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
@@ -331,6 +346,14 @@ a i {
     padding: 0 88px;
   }
 }
+@media screen and (max-width: 768px) {
+  .hero .container {
+    padding: 80px 0;
+  }
+  .hero .container figure img {
+    padding: 0;
+  }
+}
 .management {
   padding-top: 140px;
   padding-bottom: 140px;
@@ -350,6 +373,10 @@ a i {
   grid-column: 1;
   padding: 68px 60px 68px 0;
 }
+.management .container .content-item figure {
+  display: flex;
+  justify-content: center;
+}
 .management .container .content-item:nth-child(2) .content-work {
   grid-column: 2;
   padding: 183.5px 0 183.5px 100px;
@@ -357,6 +384,8 @@ a i {
 .management .container .content-item:nth-child(2) figure {
   grid-column: 1;
   grid-row: 1;
+  display: flex;
+  justify-content: center;
 }
 .management .container .content-item h1 {
   font-size: 4em;
@@ -416,7 +445,7 @@ a i {
     height: 491px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1152px) {
+@media screen and (min-width: 320px) and (max-width: 1152px) {
   .management {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -449,6 +478,18 @@ a i {
   }
   .management .container .content-item:nth-child(2) figure img {
     padding: 0 137px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .management {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .management .container .content-item figure img {
+    padding: 0;
+  }
+  .management .container .content-item:nth-child(2) figure img {
+    padding: 0;
   }
 }
 .extension {
@@ -487,8 +528,12 @@ a i {
 .extension .container .content-extension button i {
   color: #ffffff;
 }
+.extension .container figure {
+  display: flex;
+  justify-content: center;
+}
 
-@media screen and (min-width: 768px) and (max-width: 1152px) {
+@media screen and (min-width: 320px) and (max-width: 1152px) {
   .extension {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -503,6 +548,15 @@ a i {
   }
   .extension .container figure img {
     padding: 0 105px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .extension {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .extension .container figure img {
+    padding: 0;
   }
 }
 .customise {
@@ -540,9 +594,11 @@ a i {
 }
 .customise .container figure {
   margin-right: 98px;
+  display: flex;
+  justify-content: center;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .customise .container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -555,21 +611,9 @@ a i {
     margin-bottom: 60px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1152px) {
-  .extension {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  .extension .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .extension .container .content-extension {
-    margin: 0;
-    margin-bottom: 60px;
-  }
-  .extension .container figure img {
-    padding: 0 105px;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .customise .container figure {
+    padding: 0;
   }
 }
 .plans {
@@ -703,8 +747,11 @@ a i {
   content: url("/img/icons/check-yellow.png");
   margin-right: 22px;
 }
+.plans .slider-control {
+  display: none;
+}
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .plans .container header p {
     padding: 0;
   }
@@ -716,6 +763,37 @@ a i {
   .plans .container .content-plans .plan-organization,
   .plans .container .content-plans .plan-personal {
     min-width: 472px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .plans {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .plans .container .content-plans {
+    top: 348px;
+  }
+  .plans .container .content-plans .plan-free,
+  .plans .container .content-plans .plan-organization,
+  .plans .container .content-plans .plan-personal {
+    padding: 20px;
+    min-width: 289px;
+    max-height: 700px;
+    margin: 0 0 63px 22px;
+  }
+  .plans .slider-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+  .plans .slider-control .control-1,
+  .plans .slider-control .control-2,
+  .plans .slider-control .control-3 {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
   }
 }
 .work-everywhere {
@@ -760,8 +838,8 @@ a i {
 }
 .work-everywhere .container a {
   justify-self: center;
-  max-width: 200px;
-  max-height: 63px;
+  min-width: 200px;
+  min-height: 63px;
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
@@ -792,7 +870,7 @@ a i {
     justify-self: start;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .work-everywhere {
     background-image: none;
   }
@@ -846,13 +924,17 @@ a i {
 .percent-data .container .content .action {
   width: 100%;
 }
+.percent-data .container figure {
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (min-width: 1152px) and (max-width: 1439px) {
   .percent-data .container .content .text h1 {
     font-size: 4em;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .percent-data .container {
     grid-template-columns: 1fr;
     gap: 100px;
@@ -872,6 +954,12 @@ a i {
   }
   .percent-data .container figure {
     grid-row: 1;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .percent-data .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 .sponsors {
@@ -904,13 +992,19 @@ a i {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .sponsors .container figure {
     flex-direction: column;
     gap: 100px;
   }
   .sponsors .container figure img {
     align-self: center;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .sponsors {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 .favorite-apps {
@@ -960,6 +1054,12 @@ a i {
   .favorite-apps .container .content .btn-action {
     display: flex;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .favorite-apps {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 .testimonials {
@@ -1073,6 +1173,20 @@ a i {
     width: 100%;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .testimonials {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .testimonials .container .cards .card-item {
+    min-width: 288px;
+  }
+  .testimonials .container .cards .card-item .customer-data {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
 .try-today {
   padding-top: 140px;
   padding-bottom: 32px;
@@ -1082,7 +1196,7 @@ a i {
 .try-today .container {
   grid-template-columns: 1fr;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   max-width: 608px;
 }
 .try-today .container .header {
@@ -1092,7 +1206,7 @@ a i {
   gap: 24px;
 }
 .try-today .container .header h1 {
-  font-size: 4.5em;
+  font-size: 4.5em !important;
   font-weight: 700;
   text-align: center;
 }
@@ -1127,16 +1241,38 @@ a i {
     justify-content: start;
   }
   .try-today .container .header .h1 {
-    font-size: 3em;
+    font-size: 3em !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .try-today {
-    justify-content: center;
+    padding-top: 100px;
+  }
+  .try-today .container {
+    justify-content: start;
+    gap: 50px;
+    margin-right: 50px;
   }
   .try-today .container .header .h1 {
-    font-size: 2.5em;
-    line-height: 52px;
+    text-align: start;
+    font-size: 2.5em !important;
+    line-height: 52px !important;
+  }
+  .try-today .container .header p {
+    text-align: start;
+    font-size: 1.125em;
+  }
+  .try-today .container .btn-action {
+    justify-self: start;
+  }
+  .try-today .container .btn-action a {
+    padding: 20px 30px;
+  }
+  .try-today .container > p {
+    text-align: start;
+  }
+  .try-today .container figure {
+    justify-self: start;
   }
 }
 .footer {
@@ -1197,6 +1333,7 @@ a i {
 }
 .footer .container .footer-main-links .try-it-today a {
   max-width: 200px;
+  padding: 20px 30px;
 }
 .footer .container .footer-info {
   display: flex;
@@ -1219,7 +1356,7 @@ a i {
   gap: 32px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .footer {
     padding-top: 80px;
   }
@@ -1232,8 +1369,9 @@ a i {
   .footer .container .footer-main-links .try-it-today {
     max-width: 201px;
   }
-}
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .footer .container .footer-main-links .try-it-today a {
+    padding: 20px 30px;
+  }
   .footer .container .footer-info {
     flex-direction: column;
     padding-top: 0;
@@ -1253,6 +1391,30 @@ a i {
   .footer .container .footer-info figure {
     display: flex;
     gap: 32px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer .container .footer-main-links {
+    text-align: center;
+  }
+  .footer .container .footer-main-links figure {
+    display: flex;
+    justify-content: center;
+  }
+  .footer .container .footer-main-links .try-it-today {
+    max-width: none;
+    align-items: center;
+  }
+  .footer .container .footer-info ul {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer .container .footer-info ul .change-language {
+    justify-content: center;
+  }
+  .footer .container .footer-info figure {
+    justify-content: center;
   }
 }
 

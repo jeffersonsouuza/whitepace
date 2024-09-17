@@ -33,11 +33,13 @@
     }
     figure {
       margin-right: 98px;
+      display: flex;
+      justify-content: center;
     }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .customise .container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -51,19 +53,11 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1152px) {
-  .extension {
-    padding-top: 100px;
-    padding-bottom: 100px;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .customise {
     .container {
-      grid-template-columns: 1fr;
-      text-align: center;
-      .content-extension {
-        margin: 0;
-        margin-bottom: 60px;
-      }
-      figure img {
-        padding: 0 105px;
+      figure {
+        padding: 0;
       }
     }
   }

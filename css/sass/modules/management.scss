@@ -14,6 +14,10 @@
         grid-column: 1;
         padding: 68px 60px 68px 0;
       }
+      figure {
+        display: flex;
+        justify-content: center;
+      }
 
       &:nth-child(2) {
         .content-work {
@@ -23,6 +27,8 @@
         figure {
           grid-column: 1;
           grid-row: 1;
+          display: flex;
+          justify-content: center;
         }
       }
 
@@ -95,7 +101,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1152px) {
+@media screen and (min-width: 320px) and (max-width: 1152px) {
   .management {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -125,6 +131,27 @@
             grid-row: auto;
             img {
               padding: 0 137px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .management {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .container {
+      .content-item {
+        figure img {
+          padding: 0;
+        }
+        &:nth-child(2) {
+          figure {
+            img {
+              padding: 0;
             }
           }
         }

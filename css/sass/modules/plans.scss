@@ -112,9 +112,12 @@
       }
     }
   }
+  .slider-control {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@media screen and (min-width: 320px) and (max-width: 1151px) {
   .plans .container {
     header p {
       padding: 0;
@@ -127,6 +130,40 @@
       .plan-organization,
       .plan-personal {
         min-width: 472px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .plans {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .container {
+      .content-plans {
+        top: 348px;
+        .plan-free,
+        .plan-organization,
+        .plan-personal {
+          padding: 20px;
+          min-width: 289px;
+          max-height: 700px;
+          margin: 0 0 63px 22px;
+        }
+      }
+    }
+    .slider-control {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 12px;
+      .control-1,
+      .control-2,
+      .control-3 {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        cursor: pointer;
       }
     }
   }
