@@ -53,6 +53,8 @@
   font-family: "Inter";
   src: url("./font_Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
   src: url("./font_Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal, italic;
 }
 * {
   margin: 0;
@@ -117,14 +119,29 @@ a i {
   margin-left: 5px;
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .breakpoint-spacing {
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .breakpoint-spacing {
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
   .breakpoint-spacing {
     padding: 0 32px;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
   .breakpoint-spacing {
-    padding: 0 20px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .breakpoint-spacing {
+    padding: 0 220px;
   }
 }
 @media (min-width: 768px) and (max-width: 1151px) {
@@ -133,9 +150,6 @@ a i {
   }
 }
 @media (min-width: 320px) {
-  .breakpoint-spacing {
-    padding: 0 16px;
-  }
   h1 {
     font-size: 2.5em !important;
     line-height: normal;

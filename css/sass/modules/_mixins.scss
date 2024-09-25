@@ -1,0 +1,33 @@
+$xxl-device: 1920px;
+$xl-device: 1440px;
+$l-device: 1152px;
+$md-device: 768px;
+$sm-device: 320px;
+
+@mixin device($size) {
+  @if ($size == xxl) {
+    @media screen and (min-width: $xxl-device) {
+      @content;
+    }
+  }
+  @if ($size == xl) {
+    @media screen and (min-width: $xl-device) and (max-width: ($xxl-device - 1)) {
+      @content;
+    }
+  }
+  @if ($size == l) {
+    @media screen and (min-width: $l-device) and (max-width: ($xl-device - 1)) {
+      @content;
+    }
+  }
+  @if ($size == md) {
+    @media screen and (min-width: $md-device) and (max-width: ($l-device - 1)) {
+      @content;
+    }
+  }
+  @if ($size == sm) {
+    @media screen and (min-width: $sm-device) and (max-width: ($md-device - 1)) {
+      @content;
+    }
+  }
+}

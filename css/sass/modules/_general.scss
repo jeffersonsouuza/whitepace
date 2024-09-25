@@ -5,6 +5,8 @@
   src: url("./font_Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
   src: url("./font_Inter/Inter-Italic-VariableFont_opsz,wght.ttf")
     format("truetype");
+  font-weight: 100 900;
+  font-style: normal, italic;
 }
 
 * {
@@ -22,7 +24,6 @@ p {
 }
 
 h1 {
-  // line-height: 87px;
   font-weight: 700;
   font-size: $font-6 !important;
 }
@@ -59,7 +60,7 @@ a i {
   background: $primary-color-light;
   color: $white-color;
   border-radius: 8px;
-  font-size: $font-2;
+  font-size: em(18);
   border: none;
   &:hover {
     background: #3169ad;
@@ -71,15 +72,29 @@ a i {
   }
 }
 
-@media (min-width: 1440px) {
+@include device(sm) {
+  .breakpoint-spacing {
+    padding: 0 16px;
+  }
+}
+@include device(md) {
+  .breakpoint-spacing {
+    padding: 0 20px;
+  }
+}
+@include device(l) {
   .breakpoint-spacing {
     padding: 0 32px;
   }
 }
-
-@media (min-width: 768px) {
+@include device(xl) {
   .breakpoint-spacing {
-    padding: 0 20px;
+    padding: 0 32px;
+  }
+}
+@include device(xxl) {
+  .breakpoint-spacing {
+    padding: 0 220px;
   }
 }
 
@@ -90,9 +105,6 @@ a i {
 }
 
 @media (min-width: 320px) {
-  .breakpoint-spacing {
-    padding: 0 16px;
-  }
   h1 {
     font-size: 2.5em !important;
     line-height: normal;
