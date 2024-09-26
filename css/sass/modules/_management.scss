@@ -33,29 +33,15 @@
       }
 
       h1 {
-        font-size: $font-5;
-        font-weight: 700;
         margin-bottom: 24px;
-        .span1::after {
-          content: "Management";
-          background-image: url("/img/text-element.png");
-          background-repeat: no-repeat;
-          background-size: 100% 30%;
-          background-position: bottom;
-          font-weight: 700;
+        .span1 {
+          @include text-element("Management", yellow);
         }
-        .span2::after {
-          content: "together";
-          background-image: url("/img/text-element.png");
-          background-repeat: no-repeat;
-          background-size: 100% 30%;
-          background-position: bottom;
-          font-weight: 700;
+        .span2 {
+          @include text-element("together", yellow);
         }
       }
       p {
-        font-size: $font-2;
-        line-height: 1.5;
         margin-bottom: 60px;
       }
       button i {
@@ -65,7 +51,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1920px) {
+@include device(xl) {
   .management .container .content-item {
     .image-project {
       width: 719px;
@@ -74,7 +60,7 @@
   }
 }
 
-@media screen and (min-width: 1152px) and (max-width: 1440px) {
+@include device(l) {
   .management .container .content-item {
     .content-project {
       padding: 0 92px 24px 0;
@@ -139,7 +125,7 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@include device(sm) {
   .management {
     padding-top: 80px;
     padding-bottom: 80px;

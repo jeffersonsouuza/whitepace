@@ -8,26 +8,13 @@
     header {
       margin-bottom: 60px;
       h1 {
-        font-size: $font-6;
-        font-weight: 700;
         margin-bottom: 24px;
-        color: $black-color;
         text-align: center;
-        .span::after {
-          content: "Your Plan";
-          background-image: url("/img/text-element.png");
-          background-repeat: no-repeat;
-          background-size: 100% 30%;
-          background-position: bottom;
-          font-weight: 700;
-          color: $black-color;
+        .span {
+          @include text-element("Your Plan", yellow);
         }
       }
       p {
-        font-size: $font-2;
-        font-weight: 400;
-        line-height: 1.5;
-        color: $black-color;
         text-align: center;
         padding: 0 251px;
       }
@@ -54,7 +41,6 @@
         border-radius: 10px;
         border: 1px solid $yellow-color;
         p {
-          font-size: $font-2;
           font-weight: 600;
           text-align: start;
           margin-bottom: 25px;
@@ -135,7 +121,7 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@include device(sm) {
   .plans {
     padding-top: 80px;
     padding-bottom: 80px;

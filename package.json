@@ -1,12 +1,9 @@
 {
   "name": "whitespace",
-  "version": "1.0.0",
   "description": "landing page para praticar grid layout",
-  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch css/sass/style.scss css/style.css",
-    "clean-css": "cleancss --watch -o css/style.min.css css/style.css"
+    "dev": "sass --watch css/sass/style.scss css/style.css",
+    "prod": "cleancss --watch -o css/style.min.css css/style.css"
   },
   "author": "Jefferson Souza",
   "license": "ISC",

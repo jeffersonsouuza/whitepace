@@ -14,22 +14,12 @@
       flex-wrap: wrap;
       gap: 24px;
       h1 {
-        font-size: $font-6;
-        font-weight: 700;
         color: $white-color;
-        .span::after {
-          content: "you are";
-          background-image: url("/img/text-element-blue.png");
-          background-repeat: no-repeat;
-          background-size: 100% 30%;
-          background-position: bottom;
-          font-weight: 700;
-          color: $white-color;
+        .span {
+          @include text-element("your are", blue, $white-color);
         }
       }
       p {
-        font-size: $font-2;
-        font-weight: 400;
         color: $white-color;
       }
       br {
@@ -44,7 +34,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
+@include device(xl) {
   .work-everywhere {
     background-position-x: -270px;
     .container .content {
@@ -53,7 +43,7 @@
   }
 }
 
-@media screen and (min-width: 1152px) and (max-width: 1439px) {
+@include device(l) {
   .work-everywhere {
     background-image: none;
     .container {
@@ -63,7 +53,6 @@
         max-height: 421px;
         padding: 0;
         h1 {
-          font-size: $font-5;
           text-align: start;
         }
       }
@@ -84,7 +73,6 @@
         max-height: 393px;
         padding: 0;
         h1 {
-          font-size: $font-4;
           text-align: start;
         }
         p {

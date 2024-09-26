@@ -65,14 +65,35 @@
   color: #212529;
 }
 
-p {
-  line-height: 30px;
-  font-weight: 400;
+h1 {
+  font-size: 4.5em;
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #212529;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  h1 {
+    font-size: 2.25em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  h1 {
+    font-size: 3.375em;
+  }
+}
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
+  h1 {
+    font-size: 4em;
+  }
 }
 
-h1 {
-  font-weight: 700;
-  font-size: 4.5em !important;
+p {
+  font-size: 1.125em;
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #212529;
 }
 
 ul {
@@ -142,17 +163,6 @@ a i {
 @media screen and (min-width: 1920px) {
   .breakpoint-spacing {
     padding: 0 220px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1151px) {
-  h1 {
-    font-size: 3em !important;
-  }
-}
-@media (min-width: 320px) {
-  h1 {
-    font-size: 2.5em !important;
-    line-height: normal;
   }
 }
 /* background */
@@ -260,6 +270,7 @@ a i {
 }
 .container .navbar .nav_button li:nth-child(3) {
   margin-left: 20px;
+  display: none;
 }
 .container .navbar .nav_button li:nth-child(3) .menu-list {
   display: flex;
@@ -271,26 +282,44 @@ a i {
   padding: 0;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
   .nav_button li:nth-child(3) {
     display: none;
   }
 }
-@media screen and (min-width: 1152px) and (max-width: 1399px) {
-  .navbar ul:nth-child(1) {
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
+  .container .navbar ul:nth-child(1) {
     display: none;
   }
-}
-@media screen and (max-width: 1151px) {
-  .navbar ul:nth-child(1),
-  .nav_button li:nth-child(1),
-  .nav_button li:nth-child(2) {
-    display: none;
+  .container .navbar .nav_button li:nth-child(3) {
+    display: block;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .container .navbar ul:nth-child(1) {
+    display: none;
+  }
+  .container .navbar .nav_button li:nth-child(1),
+  .container .navbar .nav_button li:nth-child(2) {
+    display: none;
+  }
+  .container .navbar .nav_button li:nth-child(3) {
+    display: block;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container .navbar ul:nth-child(1) {
+    display: none;
+  }
   .container .navbar .nav_button {
     margin-left: 0;
+  }
+  .container .navbar .nav_button li:nth-child(1),
+  .container .navbar .nav_button li:nth-child(2) {
+    display: none;
+  }
+  .container .navbar .nav_button li:nth-child(3) {
+    display: block;
   }
 }
 .hero {
@@ -309,27 +338,24 @@ a i {
   padding-right: 10px;
 }
 .hero .container .content h1 {
-  color: #ffffff;
-  font-size: 4em;
-  font-weight: 500;
   margin-bottom: 24px;
+  color: #ffffff;
 }
 .hero .container .content p {
   color: #ffffff;
-  font-size: 1.125em;
   margin-bottom: 60px;
 }
 .hero .container .content button i {
   margin-left: 5px;
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
   .hero .container {
     grid-template-columns: minmax(361px, 1fr) minmax(685px, 1fr);
     grid-template-rows: 456px;
   }
 }
-@media screen and (min-width: 1152px) and (max-width: 1440px) {
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
   .hero .container {
     grid-template-columns: minmax(562px, 1fr) minmax(526px, 1fr);
     grid-template-rows: 361px;
@@ -338,7 +364,7 @@ a i {
     padding-right: 90px;
   }
 }
-@media screen and (max-width: 1152px) {
+@media screen and (min-width: 768px) and (max-width: 1151px) {
   .hero .container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -360,9 +386,15 @@ a i {
     padding: 0 88px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .hero .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
     padding: 80px 0;
+  }
+  .hero .container .content button {
+    margin-bottom: 100px;
   }
   .hero .container figure img {
     padding: 0;
@@ -402,8 +434,6 @@ a i {
   justify-content: center;
 }
 .management .container .content-item h1 {
-  font-size: 4em;
-  font-weight: 700;
   margin-bottom: 24px;
 }
 .management .container .content-item h1 .span1::after {
@@ -413,6 +443,7 @@ a i {
   background-size: 100% 30%;
   background-position: bottom;
   font-weight: 700;
+  color: #212529;
 }
 .management .container .content-item h1 .span2::after {
   content: "together";
@@ -421,23 +452,22 @@ a i {
   background-size: 100% 30%;
   background-position: bottom;
   font-weight: 700;
+  color: #212529;
 }
 .management .container .content-item p {
-  font-size: 1.125em;
-  line-height: 1.5;
   margin-bottom: 60px;
 }
 .management .container .content-item button i {
   color: #ffffff;
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
   .management .container .content-item .image-project {
     width: 719px;
     height: 448px;
   }
 }
-@media screen and (min-width: 1152px) and (max-width: 1440px) {
+@media screen and (min-width: 1152px) and (max-width: 1439px) {
   .management .container .content-item .content-project {
     padding: 0 92px 24px 0;
   }
@@ -494,7 +524,7 @@ a i {
     padding: 0 137px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .management {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -518,8 +548,6 @@ a i {
   margin-right: 98px;
 }
 .extension .container .content-extension h1 {
-  font-size: 4em;
-  font-weight: 700;
   margin-bottom: 24px;
   color: #ffffff;
 }
@@ -533,9 +561,6 @@ a i {
   color: #ffffff;
 }
 .extension .container .content-extension p {
-  font-size: 1.125em;
-  font-weight: 400;
-  line-height: 1.5;
   margin-bottom: 60px;
   color: #ffffff;
 }
@@ -564,7 +589,7 @@ a i {
     padding: 0 105px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .extension {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -582,10 +607,7 @@ a i {
   grid-template-columns: 1fr 1fr;
 }
 .customise .container .content-customise h1 {
-  font-size: 4.5em;
-  font-weight: 700;
   margin-bottom: 24px;
-  color: #212529;
 }
 .customise .container .content-customise h1 .span1::after {
   content: "your needs";
@@ -597,11 +619,7 @@ a i {
   color: #212529;
 }
 .customise .container .content-customise p {
-  font-size: 1.125em;
-  font-weight: 400;
-  line-height: 1.5;
   margin-bottom: 60px;
-  color: #212529;
 }
 .customise .container .content-customise button i {
   color: #ffffff;
@@ -643,10 +661,7 @@ a i {
   margin-bottom: 60px;
 }
 .plans .container header h1 {
-  font-size: 4.5em;
-  font-weight: 700;
   margin-bottom: 24px;
-  color: #212529;
   text-align: center;
 }
 .plans .container header h1 .span::after {
@@ -659,10 +674,6 @@ a i {
   color: #212529;
 }
 .plans .container header p {
-  font-size: 1.125em;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
   text-align: center;
   padding: 0 251px;
 }
@@ -692,7 +703,6 @@ a i {
 .plans .container .content-plans .plan-free p,
 .plans .container .content-plans .plan-organization p,
 .plans .container .content-plans .plan-personal p {
-  font-size: 1.125em;
   font-weight: 600;
   text-align: start;
   margin-bottom: 25px;
@@ -829,12 +839,10 @@ a i {
   gap: 24px;
 }
 .work-everywhere .container .content h1 {
-  font-size: 4.5em;
-  font-weight: 700;
   color: #ffffff;
 }
 .work-everywhere .container .content h1 .span::after {
-  content: "you are";
+  content: "your are";
   background-image: url("/img/text-element-blue.png");
   background-repeat: no-repeat;
   background-size: 100% 30%;
@@ -843,8 +851,6 @@ a i {
   color: #ffffff;
 }
 .work-everywhere .container .content p {
-  font-size: 1.125em;
-  font-weight: 400;
   color: #ffffff;
 }
 .work-everywhere .container .content br {
@@ -877,7 +883,6 @@ a i {
     padding: 0;
   }
   .work-everywhere .container .content h1 {
-    font-size: 4em;
     text-align: start;
   }
   .work-everywhere .container a {
@@ -897,7 +902,6 @@ a i {
     padding: 0;
   }
   .work-everywhere .container .content h1 {
-    font-size: 3em;
     text-align: start;
   }
   .work-everywhere .container .content p {
@@ -916,11 +920,6 @@ a i {
   gap: 24px;
   margin-bottom: 60px;
 }
-.percent-data .container .content .text h1 {
-  font-size: 4.5em;
-  color: #212529;
-  font-weight: 700;
-}
 .percent-data .container .content .text h1 .span::after {
   content: "your data";
   background-image: url("/img/text-element.png");
@@ -930,11 +929,6 @@ a i {
   font-weight: 700;
   color: #212529;
 }
-.percent-data .container .content .text p {
-  font-size: 1.125em;
-  color: #212529;
-  font-weight: 400;
-}
 .percent-data .container .content .action {
   width: 100%;
 }
@@ -943,11 +937,6 @@ a i {
   justify-content: center;
 }
 
-@media screen and (min-width: 1152px) and (max-width: 1439px) {
-  .percent-data .container .content .text h1 {
-    font-size: 4em;
-  }
-}
 @media screen and (min-width: 320px) and (max-width: 1151px) {
   .percent-data .container {
     grid-template-columns: 1fr;
@@ -958,9 +947,6 @@ a i {
   }
   .percent-data .container .content .text {
     text-align: center;
-  }
-  .percent-data .container .content .text h1 {
-    font-size: 3em;
   }
   .percent-data .container .content .action {
     display: flex;
@@ -986,9 +972,6 @@ a i {
   gap: 100px;
 }
 .sponsors .container h1 {
-  font-size: 4.5em;
-  font-weight: 700;
-  color: #212529;
   text-align: center;
 }
 .sponsors .container h1 .span::after {
@@ -1034,21 +1017,12 @@ a i {
   gap: 60px;
 }
 .favorite-apps .container .content .text h1 {
-  font-size: 4.5em;
-  font-weight: 700;
   margin-bottom: 24px;
-}
-.favorite-apps .container .content .text p {
-  font-size: 1.125em;
-  font-weight: 400;
 }
 
 @media screen and (min-width: 1152px) and (max-width: 1919px) {
   .favorite-apps .container {
     grid-template-columns: 1fr 1fr;
-  }
-  .favorite-apps .container .content .text h1 {
-    font-size: 4em;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 1151px) {
@@ -1061,9 +1035,6 @@ a i {
   }
   .favorite-apps .container .content .text {
     text-align: center;
-  }
-  .favorite-apps .container .content .text h1 {
-    font-size: 3em;
   }
   .favorite-apps .container .content .btn-action {
     display: flex;
@@ -1086,15 +1057,13 @@ a i {
   gap: 60px;
 }
 .testimonials .container h1 {
-  font-size: 4.5em;
-  font-weight: 700;
   text-align: center;
 }
 .testimonials .container h1 .span::after {
   content: "Says";
   background-image: url("/img/text-element.png");
   background-repeat: no-repeat;
-  background-size: 100% 80%;
+  background-size: 100% 30%;
   background-position: bottom;
   font-weight: 700;
   color: #212529;
@@ -1130,11 +1099,6 @@ a i {
   font-weight: 600;
   margin-bottom: 15px;
 }
-.testimonials .container .cards .card-item .customer-data .content-customer p {
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 20px;
-}
 .testimonials .container .slider-control {
   display: flex;
   flex-direction: row;
@@ -1150,10 +1114,7 @@ a i {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1152px) and (max-width: 1439px) {
-  .testimonials .container h1 {
-    font-size: 4.5em;
-  }
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
   .testimonials .container .cards .card-item .customer-data {
     grid-template-columns: 1fr 174px;
   }
@@ -1162,9 +1123,6 @@ a i {
   .testimonials .container {
     position: relative;
     max-height: 932px;
-  }
-  .testimonials .container h1 {
-    font-size: 3em;
   }
   .testimonials .container .cards {
     position: absolute;
@@ -1220,25 +1178,15 @@ a i {
   gap: 24px;
 }
 .try-today .container .header h1 {
-  font-size: 4.5em !important;
-  font-weight: 700;
   text-align: center;
 }
 .try-today .container .header p {
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: -0.2;
   text-align: center;
 }
 .try-today .container .btn-action {
   justify-self: center;
 }
 .try-today .container > p {
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: -0.2;
   text-align: center;
 }
 .try-today .container figure {
@@ -1254,11 +1202,8 @@ a i {
   .try-today {
     justify-content: start;
   }
-  .try-today .container .header .h1 {
-    font-size: 3em !important;
-  }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .try-today {
     padding-top: 100px;
   }
@@ -1269,12 +1214,9 @@ a i {
   }
   .try-today .container .header .h1 {
     text-align: start;
-    font-size: 2.5em !important;
-    line-height: 52px !important;
   }
   .try-today .container .header p {
     text-align: start;
-    font-size: 1.125em;
   }
   .try-today .container .btn-action {
     justify-self: start;

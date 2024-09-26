@@ -14,15 +14,9 @@
       flex-direction: column;
       gap: 24px;
       h1 {
-        font-size: $font-6 !important;
-        font-weight: 700;
         text-align: center;
       }
       p {
-        font-size: $font-3;
-        font-weight: 400;
-        line-height: 32px;
-        letter-spacing: -0.2;
         text-align: center;
       }
     }
@@ -30,10 +24,6 @@
       justify-self: center;
     }
     & > p {
-      font-size: $font-3;
-      font-weight: 400;
-      line-height: 32px;
-      letter-spacing: -0.2;
       text-align: center;
     }
     figure {
@@ -47,18 +37,13 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1151px) {
+@include device(md) {
   .try-today {
     justify-content: start;
-    .container {
-      .header .h1 {
-        font-size: $font-4 !important;
-      }
-    }
   }
 }
 
-@media screen and (max-width: 767px) {
+@include device(sm) {
   .try-today {
     padding-top: 100px;
     .container {
@@ -68,12 +53,9 @@
       .header {
         .h1 {
           text-align: start;
-          font-size: 2.5em !important;
-          line-height: 52px !important;
         }
         p {
           text-align: start;
-          font-size: $font-2;
         }
       }
       .btn-action {

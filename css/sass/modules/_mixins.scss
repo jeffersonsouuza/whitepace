@@ -31,3 +31,44 @@ $sm-device: 320px;
     }
   }
 }
+
+@mixin typography-1($color: $black-color) {
+  font-size: em(72);
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $color;
+  @include device(sm) {
+    font-size: em(36);
+  }
+  @include device(md) {
+    font-size: em(54);
+  }
+  @include device(l) {
+    font-size: em(64);
+  }
+}
+
+@mixin typography-2($color: $black-color) {
+  font-size: em(18);
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: $color;
+}
+
+@mixin text-element($content, $color-element, $color-text: $black-color) {
+  &::after {
+    content: "#{$content}";
+    @if ($color-element == yellow) {
+      background-image: url("/img/text-element.png");
+    } @else {
+      background-image: url("/img/text-element-blue.png");
+    }
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-position: bottom;
+    font-weight: 700;
+    color: $color-text;
+  }
+}

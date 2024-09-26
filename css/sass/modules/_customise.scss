@@ -6,26 +6,13 @@
     grid-template-columns: 1fr 1fr;
     .content-customise {
       h1 {
-        font-size: $font-6;
-        font-weight: 700;
         margin-bottom: 24px;
-        color: $black-color;
-        .span1::after {
-          content: "your needs";
-          background-image: url("/img/text-element.png");
-          background-repeat: no-repeat;
-          background-size: 100% 30%;
-          background-position: bottom;
-          font-weight: 700;
-          color: $black-color;
+        .span1 {
+          @include text-element("your needs", yellow);
         }
       }
       p {
-        font-size: $font-2;
-        font-weight: 400;
-        line-height: 1.5;
         margin-bottom: 60px;
-        color: $black-color;
       }
       button i {
         color: $white-color;
@@ -53,7 +40,7 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@include device(sm) {
   .customise {
     .container {
       figure {

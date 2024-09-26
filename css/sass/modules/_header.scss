@@ -49,6 +49,7 @@
       }
       li:nth-child(3) {
         margin-left: 20px;
+        display: none;
         .menu-list {
           display: flex;
           justify-content: center;
@@ -63,7 +64,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@include device(xl) {
   .nav_button {
     li:nth-child(3) {
       display: none;
@@ -71,22 +72,48 @@
   }
 }
 
-@media screen and (min-width: 1152px) and (max-width: 1399px) {
-  .navbar ul:nth-child(1) {
-    display: none;
+@include device(l) {
+  .container .navbar {
+    ul:nth-child(1) {
+      display: none;
+    }
+    .nav_button li:nth-child(3) {
+      display: block;
+    }
   }
 }
 
-@media screen and (max-width: 1151px) {
-  .navbar ul:nth-child(1),
-  .nav_button li:nth-child(1),
-  .nav_button li:nth-child(2) {
-    display: none;
+@include device(md) {
+  .container .navbar {
+    ul:nth-child(1) {
+      display: none;
+    }
+    .nav_button {
+      li:nth-child(1),
+      li:nth-child(2) {
+        display: none;
+      }
+      li:nth-child(3) {
+        display: block;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 767px) {
-  .container .navbar .nav_button {
-    margin-left: 0;
+@include device(sm) {
+  .container .navbar {
+    ul:nth-child(1) {
+      display: none;
+    }
+    .nav_button {
+      margin-left: 0;
+      li:nth-child(1),
+      li:nth-child(2) {
+        display: none;
+      }
+      li:nth-child(3) {
+        display: block;
+      }
+    }
   }
 }

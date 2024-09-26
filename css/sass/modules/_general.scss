@@ -18,14 +18,12 @@
   color: $black-color;
 }
 
-p {
-  line-height: 30px;
-  font-weight: 400;
+h1 {
+  @include typography-1();
 }
 
-h1 {
-  font-weight: 700;
-  font-size: $font-6 !important;
+p {
+  @include typography-2();
 }
 
 ul {
@@ -95,18 +93,5 @@ a i {
 @include device(xxl) {
   .breakpoint-spacing {
     padding: 0 220px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1151px) {
-  h1 {
-    font-size: $font-4 !important;
-  }
-}
-
-@media (min-width: 320px) {
-  h1 {
-    font-size: 2.5em !important;
-    line-height: normal;
   }
 }
