@@ -147,12 +147,14 @@ a i {
 }
 
 .button-primary {
+  position: relative;
   padding: 20px 40px;
   background: #4f9cf9;
   color: #ffffff;
   border-radius: 8px;
   font-size: 1.125em;
   border: none;
+  transition: 0.5s ease-in;
 }
 .button-primary:hover {
   background: #3169ad;
@@ -161,6 +163,46 @@ a i {
 .button-primary i {
   color: #ffffff;
   margin-left: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.dropdown .dropdown-btn {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.125em;
+  font-weight: 500;
+}
+.dropdown .dropdown-btn .bi {
+  padding-left: 10px;
+  color: #ffffff;
+  font-size: 1.125em;
+  font-weight: 500;
+}
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(4.0879120879, 56.5494505495, 119.9120879121);
+  min-width: 140px;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.1);
+}
+.dropdown .dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+.dropdown .dropdown-content a:hover {
+  background-color: rgb(131.8, 185.7, 250.8);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -247,6 +289,10 @@ a i {
 .container .logo img {
   max-width: 191px;
   max-height: 34px;
+  transition: transform 0.3s ease;
+}
+.container .logo img:hover {
+  transform: scale(1.1);
 }
 .container .navbar {
   display: flex;
@@ -277,6 +323,47 @@ a i {
 .container .navbar ul .button-primary {
   padding: 16px 24px;
 }
+.container .navbar ul .button-primary.nav-btn-try:hover {
+  background: #3169ad;
+  transition: 0.5s ease-in;
+}
+.container .navbar ul .button-primary.nav-btn-try:hover .bi-arrow-right-short {
+  visibility: hidden;
+  transition: 0.1s ease-in;
+}
+.container .navbar ul .button-primary.nav-btn-try:hover .arrow-right-hover {
+  display: block;
+  transform: rotate(270deg);
+}
+.container .navbar ul .button-primary.nav-btn-try:hover .arrow-right-hover span {
+  display: block;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 1.2s infinite;
+}
+.container .navbar ul .button-primary.nav-btn-try:hover .arrow-right-hover span:nth-child(2) {
+  animation-delay: -0.1s;
+}
+.container .navbar ul .button-primary.nav-btn-try:hover .arrow-right-hover span:nth-child(3) {
+  animation-delay: -0.2s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
 .container .navbar .nav_button {
   margin-left: 60px;
 }
@@ -303,6 +390,24 @@ a i {
 .container .navbar .nav_button li:nth-child(3) .menu-list i {
   margin-top: 5px;
   padding: 0;
+}
+.container #navMobile {
+  display: none;
+  padding: 15px 0;
+}
+.container #navMobile ul {
+  display: grid;
+  flex-direction: column;
+  gap: 30px;
+}
+.container #navMobile ul li .dropdown-btn:hover {
+  color: rgb(255, 233.4, 167.8);
+}
+.container #navMobile ul li .dropdown-btn:hover .icon {
+  color: rgb(255, 233.4, 167.8);
+}
+.container #navMobile ul .icon {
+  margin-right: 25px;
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1919px) {

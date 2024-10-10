@@ -72,3 +72,14 @@ $sm-device: 320px;
     color: $color-text;
   }
 }
+
+@mixin zoom($scale: 1.01) {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin box-shadow($shadow...) {
+  box-shadow: $shadow;
+}

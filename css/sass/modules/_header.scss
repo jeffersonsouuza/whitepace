@@ -1,3 +1,4 @@
+@use "sass:color";
 .container {
   padding: 16px 0;
   grid-template-columns: 1fr auto;
@@ -5,6 +6,7 @@
   .logo img {
     max-width: 191px;
     max-height: 34px;
+    @include zoom(1.1);
   }
   .navbar {
     display: flex;
@@ -33,6 +35,49 @@
       .button-primary {
         padding: 16px 24px;
       }
+      .button-primary.nav-btn-try {
+        &:hover {
+          background: #3169ad;
+          transition: 0.5s ease-in;
+          .bi-arrow-right-short {
+            visibility: hidden;
+            transition: 0.1s ease-in;
+          }
+          .arrow-right-hover {
+            display: block;
+            transform: rotate(270deg);
+            span {
+              display: block;
+              width: 1.2vw;
+              height: 1.2vw;
+              border-bottom: 4px solid white;
+              border-right: 4px solid white;
+              transform: rotate(45deg);
+              margin: -10px;
+              animation: animate 1.2s infinite;
+              &:nth-child(2) {
+                animation-delay: -0.1s;
+              }
+              &:nth-child(3) {
+                animation-delay: -0.2s;
+              }
+              @keyframes animate {
+                0% {
+                  opacity: 0;
+                  transform: rotate(45deg) translate(-20px, -20px);
+                }
+                50% {
+                  opacity: 1;
+                }
+                100% {
+                  opacity: 0;
+                  transform: rotate(45deg) translate(20px, 20px);
+                }
+              }
+            }
+          }
+        }
+      }
     }
     .nav_button {
       margin-left: 60px;
@@ -59,6 +104,27 @@
             padding: 0;
           }
         }
+      }
+    }
+  }
+
+  #navMobile {
+    display: none;
+    padding: 15px 0;
+    ul {
+      display: grid;
+      flex-direction: column;
+      gap: 30px;
+      li .dropdown-btn {
+        &:hover {
+          color: color.scale($yellow-color, $lightness: 20%);
+          .icon {
+            color: color.scale($yellow-color, $lightness: 20%);
+          }
+        }
+      }
+      .icon {
+        margin-right: 25px;
       }
     }
   }
