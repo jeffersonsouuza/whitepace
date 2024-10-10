@@ -1,5 +1,4 @@
 const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -11,6 +10,7 @@ module.exports = {
   output: {
     filename: "js/script.js",
     path: path.resolve(__dirname, "docs"),
+    publicPath: "/",
     clean: true,
   },
   mode: "production",
@@ -31,15 +31,12 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
         generator: {
-          filename: "img/loader/[hash][ext][query]",
+          filename: "img/[hash][ext][query]",
         },
       },
     ],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [{ from: "img", to: "img", noErrorOnMissing: true }],
-    }),
     new MiniCssExtractPlugin({
       filename: "css/style.css",
     }),
@@ -76,5 +73,15 @@ module.exports = {
       }),
       new CssMinimizerPlugin(),
     ],
+  },
+  devServer: {
+    static: [
+      {
+        directory: path.resolve(__dirname, "./"),
+        publicPath: "/",
+      },
+    ],
+    compress: true,
+    port: 9000,
   },
 };
