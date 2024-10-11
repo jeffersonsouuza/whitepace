@@ -1,3 +1,4 @@
+@use "sass:color";
 .footer {
   padding-top: 140px;
   padding-bottom: 32px;
@@ -7,9 +8,10 @@
     gap: 100px;
     .footer-main-links {
       display: grid;
-      grid-template-columns: 240px 1fr 1fr 1fr 260px;
+      grid-template-columns: minmax(240px, 1fr) 1fr 1fr 1fr minmax(259px, 1fr);
       gap: 100px;
       max-width: 1480px;
+
       .about {
         figure {
           margin-bottom: 15px;
@@ -19,7 +21,7 @@
           }
         }
         p {
-          font-weight: 100;
+          font-weight: 400;
           font-size: $font-1;
           color: #f7f7ee;
           br {
@@ -50,6 +52,10 @@
           font-size: 1.725em;
           font-weight: bold;
         }
+        p {
+          @include typography-2($white-color);
+          font-size: $font-1;
+        }
         a {
           max-width: 200px;
           padding: 20px 30px;
@@ -61,7 +67,6 @@
       flex-direction: row;
       justify-content: space-between;
       padding-top: 50px;
-      border-top: 1px solid #2e4e73;
       ul {
         display: flex;
         flex-direction: row;
@@ -74,6 +79,23 @@
       figure {
         display: flex;
         gap: 32px;
+        .bi:hover {
+          color: color.scale($yellow-color, $lightness: 20%);
+        }
+      }
+    }
+    .nav-link-footer:hover,
+    .nav-link-footer:hover i {
+      color: color.scale($yellow-color, $lightness: 20%);
+    }
+  }
+}
+
+@include device(l) {
+  .footer {
+    .container {
+      .footer-main-links {
+        gap: 45px;
       }
     }
   }
