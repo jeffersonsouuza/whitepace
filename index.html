@@ -12,9 +12,11 @@
 <body>
   <header class="breakpoint-spacing bg-primary-color">
     <div class="container">
-      <figure class="logo">
-        <img src="./img/white-logo.png" alt="logo whitespace">
-      </figure>
+      <a href="/">
+        <figure class="logo">
+          <img src="./img/white-logo.png" alt="logo whitespace">
+        </figure>
+      </a>
       <nav class="navbar">
         <ul>
           <li class="dropdown">
@@ -23,9 +25,9 @@
               <i class="bi bi-chevron-down"></i>
             </div>
             <div class="dropdown-content">
-              <a href="#" class="bar-item">Products 1</a>
-              <a href="#" class="bar-item">Products 2</a>
-              <a href="#" class="bar-item">Products 3</a>
+              <a href="#management" class="bar-item">Products 1</a>
+              <a href="#management" class="bar-item">Products 2</a>
+              <a href="#management" class="bar-item">Products 3</a>
             </div>
           </li>
           <li class="dropdown">
@@ -34,9 +36,9 @@
               <i class="bi bi-chevron-down"></i>
             </div>
             <div class="dropdown-content">
-              <a href="#" class="bar-item">Solutions 1</a>
-              <a href="#" class="bar-item">Solutions 2</a>
-              <a href="#" class="bar-item">Solutions 3</a>
+              <a href="#customise" class="bar-item">Solutions 1</a>
+              <a href="#customise" class="bar-item">Solutions 2</a>
+              <a href="#customise" class="bar-item">Solutions 3</a>
             </div>
           </li>
           <li class="dropdown">
@@ -45,9 +47,9 @@
               <i class="bi bi-chevron-down"></i>
             </div>
             <div class="dropdown-content">
-              <a href="#" class="bar-item">Resources 1</a>
-              <a href="#" class="bar-item">Resources 2</a>
-              <a href="#" class="bar-item">Resources 3</a>
+              <a href="#extension" class="bar-item">Resources 1</a>
+              <a href="#extension" class="bar-item">Resources 2</a>
+              <a href="#extension" class="bar-item">Resources 3</a>
             </div>
           </li>
           <li class="dropdown">
@@ -56,9 +58,9 @@
               <i class="bi bi-chevron-down"></i>
             </div>
             <div class="dropdown-content">
-              <a href="#" class="bar-item">Pricing 1</a>
-              <a href="#" class="bar-item">Pricing 2</a>
-              <a href="#" class="bar-item">Pricing 3</a>
+              <a href="#plans" class="bar-item">Pricing 1</a>
+              <a href="#plans" class="bar-item">Pricing 2</a>
+              <a href="#plans" class="bar-item">Pricing 3</a>
             </div>
           </li>
         </ul>
@@ -86,28 +88,28 @@
       <div id="navMobile">
         <ul>
           <li class="dropdown">
-            <div class="dropdown-btn">
+            <a class="dropdown-btn" href="#management">
               <i class="bi bi-box icon"></i>
               Products
-            </div>
+            </a>
           </li>
           <li class="dropdown">
-            <div class="dropdown-btn">
+            <a class="dropdown-btn" href="#customise">
               <i class="bi bi-lightbulb icon"></i>
               Solutions
-            </div>
+            </a>
           </li>
           <li class="dropdown">
-            <div class="dropdown-btn">
+            <a class="dropdown-btn" href="#extension">
               <i class="bi bi-gear icon"></i>
               Resources
-            </div>
+            </a>
           </li>
           <li class="dropdown">
-            <div class="dropdown-btn">
+            <a class="dropdown-btn" href="#plans">
               <i class="bi bi-cash icon"></i>
               Pricing
-            </div>
+            </a>
           </li>
           <li class="dropdown">
             <a class="nav-login dropdown-btn" href="#">
@@ -116,7 +118,7 @@
             </a>
           </li>
           <li class="dropdown">
-            <a class="dropdown-btn button-primary" href="#" style="max-width: 270px;">
+            <a class="dropdown-btn button-primary" href="#" style="display: inline-block;">
               Try Whitepace free
               <i class="bi bi-arrow-right-short"></i>
             </a>
@@ -142,7 +144,7 @@
     </div>
   </section>
 
-  <main class="management breakpoint-spacing bg-white">
+  <main class="management breakpoint-spacing bg-white" id="management">
     <div class="container">
       <div class="content-item">
         <div class="content-project">
@@ -175,7 +177,7 @@
     </div>
   </main>
 
-  <section class="extension breakpoint-spacing bg-primary-color">
+  <section class="extension breakpoint-spacing bg-primary-color" id="extension">
     <div class="container">
       <div class="content-extension">
         <h1 class="font-5">Use as <span class="span1"></span></h1>
@@ -191,7 +193,7 @@
     </div>
   </section>
 
-  <section class="customise breakpoint-spacing bg-white">
+  <section class="customise breakpoint-spacing bg-white" id="customise">
     <div class="container">
       <figure>
         <img class="image-customise" src="./img/image4.png" alt="image customise">
@@ -207,7 +209,7 @@
     </div>
   </section>
 
-  <section class="plans breakpoint-spacing bg-white">
+  <section class="plans breakpoint-spacing bg-white" id="plans">
     <div class="container">
       <header>
         <h1>Choose <span class="span"></span></h1>
