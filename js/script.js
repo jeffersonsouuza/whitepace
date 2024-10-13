@@ -1,4 +1,5 @@
 import "./../css/style.css";
+import SimpleAnime from "./modules/SimpleAnime.js";
 
 window.toggleNavMobile = () => {
   const navMobile = document.getElementById("navMobile");
@@ -6,3 +7,7 @@ window.toggleNavMobile = () => {
     ? (navMobile.style.display = "none")
     : (navMobile.style.display = "block");
 };
+
+if (window.SimpleAnime) {
+  new SimpleAnime();
+}
