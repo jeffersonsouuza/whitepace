@@ -11,7 +11,6 @@ module.exports = {
   output: {
     filename: "js/script.js",
     path: path.resolve(__dirname, "docs"),
-    publicPath: "../",
     clean: true,
   },
   mode: "production",
