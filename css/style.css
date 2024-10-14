@@ -51,31 +51,31 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/font_Inter/static/InterDisplay-Thin.woff2") format("truetype");
+  src: url("/font_Inter/static/InterDisplay-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/font_Inter/static/InterDisplay-Regular.woff2") format("truetype");
+  src: url("/font_Inter/static/InterDisplay-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/font_Inter/static/InterDisplay-Medium.woff2") format("truetype");
+  src: url("/font_Inter/static/InterDisplay-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/font_Inter/static/InterDisplay-SemiBold.woff2") format("truetype");
+  src: url("/font_Inter/static/InterDisplay-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/font_Inter/static/Inter-Bold.woff2") format("truetype");
+  src: url("/font_Inter/static/Inter-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -186,7 +186,7 @@ a i {
 .dropdown .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgb(7.4505494505, 103.0659340659, 218.5494505495);
+  background-color: rgb(6.6285714286, 92.8, 190.5714285714);
   min-width: 140px;
   border-radius: 5px;
   z-index: 1;
@@ -199,7 +199,7 @@ a i {
   border-radius: 5px;
 }
 .dropdown .dropdown-content a:hover {
-  background-color: rgb(131.8, 185.7, 250.8);
+  background-color: rgb(96.6, 165.9, 249.6);
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -658,6 +658,9 @@ a i {
   .management .container .content-item .content-project {
     padding: 0;
     margin-bottom: 60px;
+  }
+  .management .container .content-item .content-project br {
+    display: none;
   }
   .management .container .content-item figure img {
     padding: 0 83px;
