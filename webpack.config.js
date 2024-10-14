@@ -11,7 +11,6 @@ module.exports = {
   output: {
     filename: "js/script.js",
     path: path.resolve(__dirname, "docs"),
-    publicPath: "/",
     clean: true,
   },
   mode: "production",
@@ -32,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
         generator: {
-          filename: "img/[hash][ext][query]",
+          filename: "img/loader/[hash][ext][query]",
         },
       },
     ],
