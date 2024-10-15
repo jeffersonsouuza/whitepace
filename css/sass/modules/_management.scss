@@ -1,123 +1,125 @@
 .management {
   padding-top: 140px;
   padding-bottom: 140px;
+  background-image: url("/img/detalhes-project.png");
+  background-repeat: no-repeat;
   .container {
-    display: grid;
     grid-template-columns: 1fr;
+    gap: 100px;
     .content-item {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      &:nth-child(1) {
-        margin-bottom: 100px;
-      }
+      gap: 60px;
       .content-project {
-        grid-column: 1;
-        padding: 68px 60px 68px 0;
-      }
-      figure {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        align-items: center;
+        padding: 68px 0;
+        gap: 60px;
+        .content-project-text {
+          display: grid;
+          gap: 24px;
+          h1 {
+            .span1 {
+              @include text-element("Management", yellow);
+            }
+          }
+        }
+        a {
+          display: inline-block;
+          max-width: 205px;
+          max-height: 63px;
+        }
       }
 
       &:nth-child(2) {
+        grid-template-areas: "image work";
         .content-work {
-          grid-column: 2;
-          padding: 183.5px 0 183.5px 100px;
+          grid-area: work;
+          margin-left: 100px;
+          display: grid;
+          align-items: center;
+          padding: 183px 0;
+          gap: 60px;
+          .content-project-text {
+            display: grid;
+            gap: 24px;
+            h1 {
+              .span2 {
+                @include text-element("together", yellow);
+              }
+            }
+          }
+          a {
+            display: inline-block;
+            max-width: 205px;
+          }
         }
         figure {
-          grid-column: 1;
-          grid-row: 1;
-          display: flex;
-          justify-content: center;
+          grid-area: image;
         }
       }
-
-      h1 {
-        margin-bottom: 24px;
-        .span1 {
-          @include text-element("Management", yellow);
-        }
-        .span2 {
-          @include text-element("together", yellow);
-        }
-      }
-      p {
-        margin-bottom: 60px;
-      }
-      button i {
-        color: $white-color;
-      }
-    }
-  }
-}
-
-@include device(xl) {
-  .management .container .content-item {
-    .image-project {
-      width: 719px;
-      height: 448px;
     }
   }
 }
 
 @include device(l) {
-  .management .container .content-item {
-    .content-project {
-      padding: 0 92px 24px 0;
-    }
-    figure {
-      justify-self: end;
-      align-self: center;
-      padding: 27px 7px 27px 32px;
-    }
-    &:nth-child(2) {
-      .content-work {
-        padding: 88px 0 0 33px;
-      }
-      figure {
-        padding: 0;
-        justify-self: start;
-        align-self: center;
-        img {
-          width: 528px;
-          height: 491px;
+  .management {
+    .container {
+      .content-item {
+        .content-project {
+          padding: 0 92px 0 0;
+        }
+
+        figure img {
+          padding: 46px 0;
+        }
+
+        &:nth-child(2) {
+          .content-work {
+            margin-left: 33px;
+            padding: 88px 0;
+          }
         }
       }
     }
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1152px) {
+@media screen and (max-width: ($l-device - 1)) {
   .management {
     padding-top: 100px;
     padding-bottom: 100px;
     .container {
-      justify-items: center;
       .content-item {
         grid-template-columns: 1fr;
+        justify-content: center;
         text-align: center;
         .content-project {
-          padding: 0;
-          margin-bottom: 60px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           br {
             display: none;
           }
         }
-        figure img {
-          padding: 0 83px;
-        }
-        &:nth-child(2) {
-          .content-work {
-            grid-column: auto;
+
+        figure {
+          display: flex;
+          justify-content: center;
+          img {
             padding: 0;
-            margin-bottom: 100px;
           }
-          figure {
-            grid-column: auto;
-            grid-row: auto;
-            img {
-              padding: 0 137px;
-            }
+        }
+
+        &:nth-child(2) {
+          grid-template-areas: "work" "image";
+          gap: 100px;
+          .content-work {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: auto;
+            padding: 0;
           }
         }
       }
@@ -125,23 +127,11 @@
   }
 }
 
-@include device(sm) {
-  .management {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    .container {
-      .content-item {
-        figure img {
-          padding: 0;
-        }
-        &:nth-child(2) {
-          figure {
-            img {
-              padding: 0;
-            }
-          }
-        }
-      }
-    }
+@media screen and (max-width: ($md-device - 1)) {
+  h1 {
+    font-size: 42px !important;
+  }
+  br {
+    display: block !important;
   }
 }

@@ -51,7 +51,7 @@ $sm-device: 320px;
 
 @mixin typography-2($color: $black-color) {
   font-size: em(18);
-  line-height: normal;
+  line-height: 30px;
   font-weight: 400;
   letter-spacing: -0.02em;
   color: $color;

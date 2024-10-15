@@ -113,7 +113,7 @@ h1 {
 
 p {
   font-size: 1.125em;
-  line-height: normal;
+  line-height: 30px;
   font-weight: 400;
   letter-spacing: -0.02em;
   color: #212529;
@@ -557,40 +557,29 @@ a i {
 .management {
   padding-top: 140px;
   padding-bottom: 140px;
+  background-image: url("/img/detalhes-project.png");
+  background-repeat: no-repeat;
 }
 .management .container {
-  display: grid;
   grid-template-columns: 1fr;
+  gap: 100px;
 }
 .management .container .content-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-.management .container .content-item:nth-child(1) {
-  margin-bottom: 100px;
+  gap: 60px;
 }
 .management .container .content-item .content-project {
-  grid-column: 1;
-  padding: 68px 60px 68px 0;
+  display: grid;
+  align-items: center;
+  padding: 68px 0;
+  gap: 60px;
 }
-.management .container .content-item figure {
-  display: flex;
-  justify-content: center;
+.management .container .content-item .content-project .content-project-text {
+  display: grid;
+  gap: 24px;
 }
-.management .container .content-item:nth-child(2) .content-work {
-  grid-column: 2;
-  padding: 183.5px 0 183.5px 100px;
-}
-.management .container .content-item:nth-child(2) figure {
-  grid-column: 1;
-  grid-row: 1;
-  display: flex;
-  justify-content: center;
-}
-.management .container .content-item h1 {
-  margin-bottom: 24px;
-}
-.management .container .content-item h1 .span1::after {
+.management .container .content-item .content-project .content-project-text h1 .span1::after {
   content: "Management";
   background-image: url("/img/text-element.png");
   background-repeat: no-repeat;
@@ -599,7 +588,27 @@ a i {
   font-weight: 700;
   color: #212529;
 }
-.management .container .content-item h1 .span2::after {
+.management .container .content-item .content-project a {
+  display: inline-block;
+  max-width: 205px;
+  max-height: 63px;
+}
+.management .container .content-item:nth-child(2) {
+  grid-template-areas: "image work";
+}
+.management .container .content-item:nth-child(2) .content-work {
+  grid-area: work;
+  margin-left: 100px;
+  display: grid;
+  align-items: center;
+  padding: 183px 0;
+  gap: 60px;
+}
+.management .container .content-item:nth-child(2) .content-work .content-project-text {
+  display: grid;
+  gap: 24px;
+}
+.management .container .content-item:nth-child(2) .content-work .content-project-text h1 .span2::after {
   content: "together";
   background-image: url("/img/text-element.png");
   background-repeat: no-repeat;
@@ -608,86 +617,69 @@ a i {
   font-weight: 700;
   color: #212529;
 }
-.management .container .content-item p {
-  margin-bottom: 60px;
+.management .container .content-item:nth-child(2) .content-work a {
+  display: inline-block;
+  max-width: 205px;
 }
-.management .container .content-item button i {
-  color: #ffffff;
+.management .container .content-item:nth-child(2) figure {
+  grid-area: image;
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .management .container .content-item .image-project {
-    width: 719px;
-    height: 448px;
-  }
-}
 @media screen and (min-width: 1152px) and (max-width: 1439px) {
   .management .container .content-item .content-project {
-    padding: 0 92px 24px 0;
+    padding: 0 92px 0 0;
   }
-  .management .container .content-item figure {
-    justify-self: end;
-    align-self: center;
-    padding: 27px 7px 27px 32px;
+  .management .container .content-item figure img {
+    padding: 46px 0;
   }
   .management .container .content-item:nth-child(2) .content-work {
-    padding: 88px 0 0 33px;
-  }
-  .management .container .content-item:nth-child(2) figure {
-    padding: 0;
-    justify-self: start;
-    align-self: center;
-  }
-  .management .container .content-item:nth-child(2) figure img {
-    width: 528px;
-    height: 491px;
+    margin-left: 33px;
+    padding: 88px 0;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 1152px) {
+@media screen and (max-width: 1151px) {
   .management {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  .management .container {
-    justify-items: center;
-  }
   .management .container .content-item {
     grid-template-columns: 1fr;
+    justify-content: center;
     text-align: center;
   }
   .management .container .content-item .content-project {
-    padding: 0;
-    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .management .container .content-item .content-project br {
     display: none;
   }
+  .management .container .content-item figure {
+    display: flex;
+    justify-content: center;
+  }
   .management .container .content-item figure img {
-    padding: 0 83px;
+    padding: 0;
+  }
+  .management .container .content-item:nth-child(2) {
+    grid-template-areas: "work" "image";
+    gap: 100px;
   }
   .management .container .content-item:nth-child(2) .content-work {
-    grid-column: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
     padding: 0;
-    margin-bottom: 100px;
-  }
-  .management .container .content-item:nth-child(2) figure {
-    grid-column: auto;
-    grid-row: auto;
-  }
-  .management .container .content-item:nth-child(2) figure img {
-    padding: 0 137px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .management {
-    padding-top: 80px;
-    padding-bottom: 80px;
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 42px !important;
   }
-  .management .container .content-item figure img {
-    padding: 0;
-  }
-  .management .container .content-item:nth-child(2) figure img {
-    padding: 0;
+  br {
+    display: block !important;
   }
 }
 .extension {
@@ -1443,7 +1435,7 @@ a i {
 }
 .footer .container .footer-main-links .try-it-today p {
   font-size: 1.125em;
-  line-height: normal;
+  line-height: 30px;
   font-weight: 400;
   letter-spacing: -0.02em;
   color: #ffffff;
