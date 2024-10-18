@@ -153,6 +153,7 @@ a i {
   color: #ffffff;
   border-radius: 8px;
   font-size: 1.125em;
+  font-weight: bold;
   border: none;
   transition: 0.5s ease-in;
 }
