@@ -2,41 +2,50 @@
   padding-top: 140px;
   padding-bottom: 140px;
   min-height: 994px;
+  h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    .span {
+      @include text-element("Says", yellow);
+    }
+  }
   .container {
     grid-template-columns: 1fr;
     gap: 60px;
-    h1 {
-      text-align: center;
-      .span {
-        @include text-element("Says", yellow);
-      }
-    }
+
     .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
       .card-item {
         display: grid;
         padding: 60px 40px;
         gap: 60px;
         border-radius: 10px;
         box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
-        &:nth-child(1) {
-          .testimonial {
-            border-bottom: 1px solid $black-color;
-          }
-        }
         .testimonial {
           display: grid;
           gap: 32px;
           border-bottom: 1px solid $white-color;
           padding-bottom: 40px;
+          .testimonial-quote {
+            width: 86px;
+            height: 62px;
+            background-image: url("/img/icons/quote-white.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
         }
         .customer-data {
           display: grid;
           grid-template-columns: 1fr 246px;
           gap: 42px;
+          img {
+            max-width: 95px;
+            max-height: 95px;
+          }
           .content-customer {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
             h2 {
               font-size: $font-3;
               font-weight: 600;
@@ -44,20 +53,68 @@
             }
           }
         }
+        &:hover {
+          background: $white-color;
+          transition: background 0.3s ease-in-out;
+          .testimonial {
+            border-bottom: 1px solid $black-color;
+            transition: border-bottom 0.3s ease-in-out;
+            .testimonial-quote {
+              background-image: url("/img/icons/quote-black.png");
+            }
+            p {
+              color: $black-color;
+              transition: color 0.3s ease-in-out;
+            }
+          }
+          .customer-data {
+            .content-customer {
+              p {
+                color: $black-color;
+                transition: color 0.3s ease-in-out;
+              }
+            }
+          }
+        }
       }
     }
-    .slider-control {
+
+    .slider-pagination {
       display: flex;
-      flex-direction: row;
       justify-content: center;
-      gap: 12px;
-      .control-1,
-      .control-2,
-      .control-3 {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        cursor: pointer;
+      margin-top: 60px;
+      .swiper-pagination-bullet {
+        background-color: $primary-color-light;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $sm-device) and (max-width: ($l-device - 1)) {
+  .testimonials .container {
+    .cards {
+      .card-item {
+        padding: 20px;
+        .customer-data {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $l-device) and (max-width: ($xxl-device - 1)) {
+  .testimonials .container {
+    .cards {
+      .card-item {
+        padding: 60px 24px;
+        .customer-data {
+          grid-template-columns: 1fr minmax(174px, 1fr);
+          gap: 24px;
+        }
       }
     }
   }
@@ -66,55 +123,9 @@
 @include device(xl) {
   .testimonials .container {
     .cards {
-      .card-item .customer-data {
-        grid-template-columns: 1fr 174px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1151px) {
-  .testimonials {
-    .container {
-      position: relative;
-      max-height: 932px;
-      .cards {
-        position: absolute;
-        top: 140px;
-        overflow-y: hidden;
-        padding: 20px 0;
-        margin: 20px 0;
-        left: 0;
-        right: 0;
-        .card-item {
-          min-width: 430px;
-          .customer-data {
-            grid-template-columns: 1fr 193px;
-          }
-        }
-      }
-      .slider-control {
-        position: absolute;
-        top: 780px;
-        width: 100%;
-      }
-    }
-  }
-}
-
-@include device(sm) {
-  .testimonials {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    .container {
-      .cards {
-        .card-item {
-          min-width: 288px;
-          .customer-data {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
-          }
+      .card-item {
+        .customer-data {
+          grid-template-columns: 1fr minmax(246px, 1fr);
         }
       }
     }
