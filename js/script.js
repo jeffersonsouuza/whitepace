@@ -48,3 +48,42 @@ new Swiper(".mySliderTestimonials", {
     },
   },
 });
+
+const swiperPlans = new Swiper(".mySliderPlans", {
+  modules: [Pagination],
+  freeMode: true,
+  slidesPerView: 3,
+  spaceBetween: 32,
+  centeredSlides: true,
+  pagination: {
+    el: ".slider-pagination-plans",
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      initialSlide: 1,
+    },
+    768: {
+      slidesPerView: 1.75,
+      initialSlide: 1,
+    },
+    1152: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      centeredSlides: false,
+      pagination: {
+        el: ".slider-pagination-plans",
+        clickable: true,
+        enabled: false,
+      },
+      allowTouchMove: false,
+      navigation: false,
+      freeMode: false,
+    },
+  },
+});
+
+window.addEventListener("resize", () => {
+  swiperPlans.update();
+});

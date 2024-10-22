@@ -153,7 +153,6 @@ a i {
   color: #ffffff;
   border-radius: 8px;
   font-size: 1.125em;
-  font-weight: bold;
   border: none;
   transition: 0.5s ease-in;
 }
@@ -798,14 +797,15 @@ a i {
 .plans {
   padding-top: 140px;
   padding-bottom: 140px;
-  min-height: 1272px;
 }
 .plans .container {
   grid-template-columns: 1fr;
-  position: relative;
 }
 .plans .container header {
   margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .plans .container header h1 {
   margin-bottom: 24px;
@@ -822,151 +822,103 @@ a i {
 }
 .plans .container header p {
   text-align: center;
-  padding: 0 251px;
 }
-.plans .container .content-plans {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  position: absolute;
-  top: 229px;
-  max-width: 1481px;
-  overflow-y: hidden;
+.plans .container .swiper {
+  width: 100%;
 }
-.plans .container .content-plans .plan-free {
+.plans .container .swiper .content-plans {
+  display: flex;
+  align-items: center;
+}
+.plans .container .swiper .content-plans .plan-free {
   padding: 40px 44px;
-  margin: 63px 32px 63px 0;
 }
-.plans .container .content-plans .plan-organization {
+.plans .container .swiper .content-plans .plan-organization {
   padding: 40px 44px;
-  margin: 63px 0 63px 32px;
 }
-.plans .container .content-plans .plan-free,
-.plans .container .content-plans .plan-organization,
-.plans .container .content-plans .plan-personal {
+.plans .container .swiper .content-plans .plan-free,
+.plans .container .swiper .content-plans .plan-organization,
+.plans .container .swiper .content-plans .plan-personal {
   border-radius: 10px;
   border: 1px solid #ffe492;
 }
-.plans .container .content-plans .plan-free p,
-.plans .container .content-plans .plan-organization p,
-.plans .container .content-plans .plan-personal p {
+.plans .container .swiper .content-plans .plan-free p,
+.plans .container .swiper .content-plans .plan-organization p,
+.plans .container .swiper .content-plans .plan-personal p {
   font-weight: 600;
   text-align: start;
   margin-bottom: 25px;
 }
-.plans .container .content-plans .plan-free p:nth-child(3),
-.plans .container .content-plans .plan-organization p:nth-child(3),
-.plans .container .content-plans .plan-personal p:nth-child(3) {
+.plans .container .swiper .content-plans .plan-free p:nth-child(3),
+.plans .container .swiper .content-plans .plan-organization p:nth-child(3),
+.plans .container .swiper .content-plans .plan-personal p:nth-child(3) {
   font-size: 0.9em;
 }
-.plans .container .content-plans .plan-free .value,
-.plans .container .content-plans .plan-organization .value,
-.plans .container .content-plans .plan-personal .value {
+.plans .container .swiper .content-plans .plan-free .value,
+.plans .container .swiper .content-plans .plan-organization .value,
+.plans .container .swiper .content-plans .plan-personal .value {
   font-size: 2.25em;
   font-weight: 700;
   margin-bottom: 25px;
 }
-.plans .container .content-plans .plan-free ul,
-.plans .container .content-plans .plan-organization ul,
-.plans .container .content-plans .plan-personal ul {
+.plans .container .swiper .content-plans .plan-free ul,
+.plans .container .swiper .content-plans .plan-organization ul,
+.plans .container .swiper .content-plans .plan-personal ul {
   margin-bottom: 25px;
 }
-.plans .container .content-plans .plan-free ul li,
-.plans .container .content-plans .plan-organization ul li,
-.plans .container .content-plans .plan-personal ul li {
+.plans .container .swiper .content-plans .plan-free ul li,
+.plans .container .swiper .content-plans .plan-organization ul li,
+.plans .container .swiper .content-plans .plan-personal ul li {
   display: flex;
   align-items: center;
   margin-bottom: 28px;
   font-weight: 500;
   line-height: 1.5;
 }
-.plans .container .content-plans .plan-free ul li::before,
-.plans .container .content-plans .plan-organization ul li::before,
-.plans .container .content-plans .plan-personal ul li::before {
+.plans .container .swiper .content-plans .plan-free ul li::before,
+.plans .container .swiper .content-plans .plan-organization ul li::before,
+.plans .container .swiper .content-plans .plan-personal ul li::before {
   content: url("/img/icons/Ckeck.png");
   position: relative;
   bottom: -2.5px;
   margin-right: 22px;
 }
-.plans .container .content-plans .plan-free a,
-.plans .container .content-plans .plan-organization a,
-.plans .container .content-plans .plan-personal a {
+.plans .container .swiper .content-plans .plan-free a,
+.plans .container .swiper .content-plans .plan-organization a,
+.plans .container .swiper .content-plans .plan-personal a {
   border-radius: 8px;
   border: 1px solid #ffe492;
   padding: 16px 40px;
 }
-.plans .container .content-plans .plan-free a.link-plan-personal,
-.plans .container .content-plans .plan-organization a.link-plan-personal,
-.plans .container .content-plans .plan-personal a.link-plan-personal {
+.plans .container .swiper .content-plans .plan-free a.link-plan-personal,
+.plans .container .swiper .content-plans .plan-organization a.link-plan-personal,
+.plans .container .swiper .content-plans .plan-personal a.link-plan-personal {
   border: none;
   color: #ffffff;
 }
-.plans .container .content-plans .plan-personal {
+.plans .container .swiper .content-plans .plan-personal {
   padding: 80px 44px;
 }
-.plans .container .content-plans .plan-personal p,
-.plans .container .content-plans .plan-personal li {
+.plans .container .swiper .content-plans .plan-personal p,
+.plans .container .swiper .content-plans .plan-personal li {
   color: #ffffff;
 }
-.plans .container .content-plans .plan-personal p:nth-child(2) {
+.plans .container .swiper .content-plans .plan-personal p:nth-child(2) {
   color: #ffe492;
 }
-.plans .container .content-plans .plan-personal ul {
+.plans .container .swiper .content-plans .plan-personal ul {
   margin-bottom: 35px;
 }
-.plans .container .content-plans .plan-personal ul li::before {
+.plans .container .swiper .content-plans .plan-personal ul li::before {
   content: url("/img/icons/check-yellow.png");
   margin-right: 22px;
 }
-.plans .slider-control {
-  display: none;
+.plans .container .swiper .slider-pagination-plans {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1151px) {
-  .plans .container header p {
-    padding: 0;
-  }
-  .plans .container .content-plans {
-    left: 0;
-    right: 0;
-  }
-  .plans .container .content-plans .plan-free,
-  .plans .container .content-plans .plan-organization,
-  .plans .container .content-plans .plan-personal {
-    min-width: 472px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .plans {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  .plans .container .content-plans {
-    top: 348px;
-  }
-  .plans .container .content-plans .plan-free,
-  .plans .container .content-plans .plan-organization,
-  .plans .container .content-plans .plan-personal {
-    padding: 20px;
-    min-width: 289px;
-    max-height: 700px;
-    margin: 0 0 63px 22px;
-  }
-  .plans .slider-control {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 12px;
-  }
-  .plans .slider-control .control-1,
-  .plans .slider-control .control-2,
-  .plans .slider-control .control-3 {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-}
 .work-everywhere {
   padding: 140px 0;
   background-image: url("/img/detalhes2.png");
