@@ -1494,5 +1494,128 @@ a i {
     justify-content: center;
   }
 }
+.login-bg {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: #ffffff;
+}
+.login-bg .container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  height: 100vh;
+}
+.login-bg .container .login {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  gap: 48px;
+  max-width: 388px;
+}
+.login-bg .container .login .login-header {
+  display: grid;
+  gap: 28px;
+}
+.login-bg .container .login .login-header h1 {
+  font-size: 36px;
+}
+.login-bg .container .login .login-form {
+  display: grid;
+  gap: 24px;
+}
+.login-bg .container .login .login-form .login-data {
+  display: grid;
+  gap: 8px;
+}
+.login-bg .container .login .login-form .login-data label {
+  font-weight: 600;
+}
+.login-bg .container .login .login-form .login-data input {
+  border: 1px solid #4f9cf9;
+  border-radius: 12px;
+  background: rgb(237.4, 245.1, 254.4);
+  padding: 16px;
+}
+.login-bg .container .login .login-form .login-data input:focus {
+  outline-color: #043873;
+}
+.login-bg .container .login .login-form .login-forgot-password {
+  color: #043873;
+  text-align: end;
+  font-weight: 500;
+  font-size: 16px;
+}
+.login-bg .container .login .login-form .login-submit {
+  border-radius: 12px;
+  padding: 16px 0;
+}
+.login-bg .container .login .login-option {
+  display: grid;
+  gap: 24px;
+}
+.login-bg .container .login .login-option .login-or {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.login-bg .container .login .login-option .login-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+  background: rgb(237.4, 245.1, 254.4);
+  transition: background 0.3s ease-out;
+  border-radius: 12px;
+  padding: 12px 0 12px 92px;
+}
+.login-bg .container .login .login-option .login-social-media i {
+  color: #212529;
+  font-size: 30px;
+}
+.login-bg .container .login .login-option .login-social-media:hover {
+  background: rgb(167, 205.5, 252);
+  transition: background 0.3s ease-in;
+}
+.login-bg .container .login .login-register {
+  text-align: center;
+}
+.login-bg .container .login .login-register a {
+  color: #043873;
+  text-align: end;
+  font-weight: 500;
+}
+.login-bg .container .login .login-footer {
+  text-align: center;
+  text-transform: uppercase;
+}
+.login-bg .container .login .login-footer p {
+  color: rgb(182.5297297297, 189.6, 196.6702702703);
+  font-size: 16px;
+}
+.login-bg .container .login-image {
+  position: relative;
+}
+.login-bg .container .login-image img {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1151px) {
+  .login-bg {
+    padding: 16px 10px;
+  }
+  .login-bg .container {
+    grid-template-columns: 1fr;
+  }
+  .login-bg .container .login-image {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
