@@ -6,6 +6,8 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
+const pages = ["index", "login"];
+
 module.exports = {
   entry: "./js/script.js",
   output: {
@@ -44,18 +46,21 @@ module.exports = {
       extensions: ["js"],
       emitWarning: true,
     }),
-    new HtmlWebpackPlugin({
-      template: "./index.html",
-      filename: "index.html",
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        useShortDoctype: true,
-      },
-    }),
+    ...pages.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          template: `./${page}.html`,
+          filename: `${page}.html`,
+          minify: {
+            collapseWhitespace: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true,
+          },
+        })
+    ),
     new CopyPlugin({
       patterns: [{ from: "img", to: "img" }],
     }),
