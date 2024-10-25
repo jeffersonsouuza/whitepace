@@ -36,6 +36,17 @@ module.exports = {
           filename: "img/loader/[hash][ext][query]",
         },
       },
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            targets: "defaults",
+            presets: [["@babel/preset-env"]],
+          },
+        },
+      },
     ],
   },
   plugins: [
