@@ -205,6 +205,18 @@ a i {
   display: block;
 }
 
+.error-message {
+  font-size: 1.125em;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #212529;
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .breakpoint-spacing {
     padding: 0 16px;

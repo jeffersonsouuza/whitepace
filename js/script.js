@@ -1,11 +1,22 @@
 import "./../css/style.css";
 import SimpleAnime from "./modules/SimpleAnime.js";
 import SmoothScroll from "./modules/SmoothScroll.js";
+import checkValidity from "./modules/validation.js";
 
 // import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+
+// Validate Login
+window.checkValidity = checkValidity;
+const loginForm = document.querySelector(".login-submit");
+if (loginForm) {
+  loginForm.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.assign("index.html");
+  });
+}
 
 // Navbar Mobile
 window.toggleNavMobile = () => {
@@ -45,6 +56,7 @@ if (testimonialSlider) {
   });
 }
 
+// Slider Plans
 const planSlider = document.querySelector(".mySliderPlans");
 if (planSlider) {
   import("swiper").then(({ default: Swiper }) => {

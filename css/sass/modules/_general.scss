@@ -139,6 +139,14 @@ a i {
   }
 }
 
+.error-message {
+  @include typography-2;
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
 @include device(sm) {
   .breakpoint-spacing {
     padding: 0 16px;

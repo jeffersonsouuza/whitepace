@@ -49,17 +49,17 @@
           <h1>Welcome Back 👋</h1>
           <p>Today is a new day. It's your day. You shape it. Sign in to start managing your projects.</p>
         </header>
-        <form class="login-form">
+        <form class="login-form" id="login-form" name="login-form" action="">
           <div class="login-data">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Example@email.com">
+            <input type="email" id="email" name="email" placeholder="Example@email.com" required onblur="window.checkValidity('email', '@', 'Invalid email address')">
           </div>
           <div class="login-data">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="At least 8 characters">
+            <input type="password" id="password" name="password" placeholder="At least 8 characters" required onblur="window.checkValidity('password', '', 'Invalid password')">
           </div>
           <a class="login-forgot-password" href="#" onclick="event.preventDefault();" aria-label="Try Whitepace free.">Forgot Password?</a>
-          <button class="button-primary login-submit" type="submit">Sign in</button>
+          <button class="button-primary login-submit" type="submit" disabled>Sign in</button>
         </form>
         <div class="login-option">
           <div class="login-or">
