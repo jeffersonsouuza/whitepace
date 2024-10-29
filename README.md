@@ -4,16 +4,40 @@
   <img src="img/hero-lp.jpg" alt="Landing Page" width="500" height="300">
 </p>
 
-Este projeto é uma landing page para uma software de controle de tasks. O projeto utiliza **Sass** para facilitar o gerenciamento de estilos e para minimizar o tamanho do arquivo CSS final.
+**Whitepace** é uma landing page desenvolvida para apresentar um software de controle de tarefas, com foco em uma interface atraente e moderna. Este projeto foi criado para aprimorar habilidades com **HTML5**, **CSS3 (GRID)**, **JavaScript** e ferramentas de otimização e automação como **Webpack** e **Babel**.
 
-Deploy: https://jeffersonsouuza.github.io/whitepace
+[**Deploy da Página**] https://jeffersonsouuza.github.io/whitepace
 
 ## Tecnologias Utilizadas
 
 - **HTML5**
-- **CSS3** (com GRID)
+- **CSS3** (com Grid Layout)
 - **Sass**
-- **Clean-css**
+- **Javascript**
+- **Swiper JS** (para carrossel de imagens)
+- **Webpack** (para gerenciamento de módulos)
+- **EsLint** (para padronização de código)
+- **Babel** (para compatibilidade com versões mais antigas de navegadores)
+
+## Estrutura de Pastas
+
+Abaixo está a estrutura de pastas do projeto para facilitar a navegação:
+
+```plaintext
+whitepace/
+├── docs/                  # Pasta gerada com a versão final para produção
+├── css/                   # Arquivos CSS e Sass
+│   ├── sass/              # Arquivos .scss organizados em partials
+│   └── style.css          # Arquivo CSS principal gerado a partir do Sass
+├── img/                   # Imagens usadas no projeto
+├── js/                    # Arquivos JavaScript
+│   ├── modules/           # Módulos JS
+│   │   └── script.js      # Arquivo JS principal
+│   └── index.html         # Página principal (HTML)
+├── .eslintrc              # Configuração do ESLint
+├── package.json           # Dependências e scripts do projeto
+└── webpack.config.js      # Configuração do Webpack
+```
 
 ## Como Configurar o Projeto
 
@@ -28,7 +52,7 @@ Antes de começar, certifique-se de ter o **Node.js** e o **npm** instalados em 
    Clone este repositório para a sua máquina local usando o comando abaixo:
 
    ```bash
-   git clone https://github.com/jeffersonsouuza/design-agency.git
+   git clone https://github.com/jeffersonsouuza/whitepace.git
    ```
 
 2. **Navegue até o diretório do projeto:**
@@ -36,7 +60,7 @@ Antes de começar, certifique-se de ter o **Node.js** e o **npm** instalados em 
    Após clonar o repositório, entre na pasta do projeto:
 
    ```bash
-   cd nome-do-repositorio
+   cd whitepace
    ```
 
 3. **Instale as dependências do projeto:**
@@ -51,25 +75,23 @@ Antes de começar, certifique-se de ter o **Node.js** e o **npm** instalados em 
 
 ### Compilando Sass
 
-Para compilar os arquivos Sass e assistir por mudanças, execute o script abaixo:
+Para compilar os arquivos Sass e iniciar um servidor de desenvolvimento com atualização automática, execute o seguinte comando:
 
 ```bash
 npm run dev
 ```
 
-### Minificando o CSS
+### Processo de Build do Webpack
 
-Para reduzir o tamanho do CSS para produção, use o script:
+Para gerar a versão de produção do projeto com o Webpack, use o comando:
 
 ```bash
-npm run prod
+npm run build
 ```
-
-Este comando irá gerar um arquivo minificado style.min.css a partir do style.css original.
 
 ## Créditos
 
-Este projeto utilizou o design da **Whitepace - SaaS Landing Page** disponibilizado no Figma Community, para fins de prática e estudo do GRID.
+Este projeto é baseado no design da Whitepace - SaaS Landing Page disponibilizado no Figma Community, e foi desenvolvido para praticar técnicas de layout e design com CSS Grid.
 
-- Projeto original: [Whitepace - SaaS Landing Page](<https://www.figma.com/design/YTJKhpHH5Dv61sJDoIs0no/Whitepace---SaaS-Landing-Page-(Community)?t=Vjo01d8wCaYFyOpd-0>)
-- Autor: [Al Razi Siam](https://www.figma.com/@alrazisiam)
+- Design original: [Whitepace - SaaS Landing Page](<https://www.figma.com/design/YTJKhpHH5Dv61sJDoIs0no/Whitepace---SaaS-Landing-Page-(Community)?t=Vjo01d8wCaYFyOpd-0>)
+- Autor do Design: [Al Razi Siam](https://www.figma.com/@alrazisiam)

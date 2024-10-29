@@ -1,6 +1,6 @@
 {
   "name": "whitespace",
-  "description": "landing page para praticar grid layout",
+  "description": "Este projeto é uma landing page para de um software de controle de tasks.",
   "private": true,
   "scripts": {
     "dev": "npm-run-all --parallel sass start",
