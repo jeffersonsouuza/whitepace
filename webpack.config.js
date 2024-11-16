@@ -12,7 +12,7 @@ module.exports = {
   entry: './js/script.js',
   output: {
     filename: 'js/script.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
   },
   mode: 'production',
